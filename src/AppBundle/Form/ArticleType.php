@@ -5,6 +5,7 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType; 
 
 class ArticleType extends AbstractType
 {
@@ -13,8 +14,9 @@ class ArticleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title')->add('description');
-    }/**
+        $builder->add('title')->add('description')->add('user',EntityType::class,array('class' => 'AppBundle:User', 'choice_label' =>'name',));
+    }
+    /**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

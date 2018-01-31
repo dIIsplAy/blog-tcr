@@ -2,118 +2,20 @@
 
 namespace AppBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
+
+
 /**
  * User
  */
-class User
+class User extends BaseUser
 {
     /**
      * @var int
      */
-    private $id;
+    protected $id;
 
-    /**
-     * @var string
-     */
-    private $name;
-
-    /**
-     * @var string
-     */
-    private $surname;
-
-    /**
-     * @var int
-     */
-    private $age;
-
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return User
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Set surname
-     *
-     * @param string $surname
-     *
-     * @return User
-     */
-    public function setSurname($surname)
-    {
-        $this->surname = $surname;
-
-        return $this;
-    }
-
-    /**
-     * Get surname
-     *
-     * @return string
-     */
-    public function getSurname()
-    {
-        return $this->surname;
-    }
-
-    /**
-     * Set age
-     *
-     * @param integer $age
-     *
-     * @return User
-     */
-    public function setAge($age)
-    {
-        $this->age = $age;
-
-        return $this;
-    }
-
-    /**
-     * Get age
-     *
-     * @return int
-     */
-    public function getAge()
-    {
-        return $this->age;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $articles;
-
+    
     /**
      * Constructor
      */
@@ -121,6 +23,11 @@ class User
     {
         $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
     }
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $articles;
 
     /**
      * Add article

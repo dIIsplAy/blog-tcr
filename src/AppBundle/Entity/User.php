@@ -2,16 +2,66 @@
 
 namespace AppBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
+
+
 /**
  * User
  */
-class User
+class User extends BaseUser
 {
     /**
      * @var int
      */
-    private $id;
+    protected $id;
 
+    
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $articles;
+
+    /**
+     * Add article
+     *
+     * @param \AppBundle\Entity\Article $article
+     *
+     * @return User
+     */
+    public function addArticle(\AppBundle\Entity\Article $article)
+    {
+        $this->articles[] = $article;
+
+        return $this;
+    }
+
+    /**
+     * Remove article
+     *
+     * @param \AppBundle\Entity\Article $article
+     */
+    public function removeArticle(\AppBundle\Entity\Article $article)
+    {
+        $this->articles->removeElement($article);
+    }
+
+    /**
+     * Get articles
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getArticles()
+    {
+        return $this->articles;
+    }
     /**
      * @var string
      */
@@ -23,20 +73,10 @@ class User
     private $surname;
 
     /**
-     * @var int
+     * @var integer
      */
     private $age;
 
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set name
@@ -103,56 +143,10 @@ class User
     /**
      * Get age
      *
-     * @return int
+     * @return integer
      */
     public function getAge()
     {
         return $this->age;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $articles;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->articles = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add article
-     *
-     * @param \AppBundle\Entity\Article $article
-     *
-     * @return User
-     */
-    public function addArticle(\AppBundle\Entity\Article $article)
-    {
-        $this->articles[] = $article;
-
-        return $this;
-    }
-
-    /**
-     * Remove article
-     *
-     * @param \AppBundle\Entity\Article $article
-     */
-    public function removeArticle(\AppBundle\Entity\Article $article)
-    {
-        $this->articles->removeElement($article);
-    }
-
-    /**
-     * Get articles
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getArticles()
-    {
-        return $this->articles;
     }
 }

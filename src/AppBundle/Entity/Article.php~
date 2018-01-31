@@ -96,11 +96,11 @@ class Article
     /**
      * Add comment
      *
-     * @param \App\Entity\Comment $comment
+     * @param \AppBundle\Entity\Comment $comment
      *
      * @return Article
      */
-    public function addComment(\App\Entity\Comment $comment)
+    public function addComment(\AppBundle\Entity\Comment $comment)
     {
         $this->comments[] = $comment;
 
@@ -110,9 +110,9 @@ class Article
     /**
      * Remove comment
      *
-     * @param \App\Entity\Comment $comment
+     * @param \AppBundle\Entity\Comment $comment
      */
-    public function removeComment(\App\Entity\Comment $comment)
+    public function removeComment(\AppBundle\Entity\Comment $comment)
     {
         $this->comments->removeElement($comment);
     }
@@ -125,5 +125,43 @@ class Article
     public function getComments()
     {
         return $this->comments;
+    }
+    /**
+     * Get string
+     * 
+     * 
+     */
+    public function __toString()
+    {
+        return $this->comments;
+    }
+    /**
+     * @var \AppBundle\Entity\User
+     */
+    private $user;
+
+
+    /**
+     * Set user
+     *
+     * @param \AppBundle\Entity\User $user
+     *
+     * @return Article
+     */
+    public function setUser(\AppBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \AppBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
