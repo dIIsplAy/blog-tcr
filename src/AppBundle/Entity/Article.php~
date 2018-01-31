@@ -80,5 +80,50 @@ class Article
     {
         return $this->description;
     }
-}
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $comments;
 
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->comments = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add comment
+     *
+     * @param \App\Entity\Comment $comment
+     *
+     * @return Article
+     */
+    public function addComment(\App\Entity\Comment $comment)
+    {
+        $this->comments[] = $comment;
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \App\Entity\Comment $comment
+     */
+    public function removeComment(\App\Entity\Comment $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+}

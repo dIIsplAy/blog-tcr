@@ -43,7 +43,9 @@ class CommentController extends Controller
             $em->flush();
 
             return $this->redirectToRoute('comment_show', array('id' => $comment->getId()));
+            
         }
+        // die(print_r($comment,1));
 
         return $this->render('comment/new.html.twig', array(
             'comment' => $comment,

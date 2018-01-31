@@ -60,11 +60,11 @@ class Comment
     /**
      * Set article
      *
-     * @param \App\Entity\Article $article
+     * @param \AppBundle\Entity\Article $article
      *
      * @return Comment
      */
-    public function setArticle(\App\Entity\Article $article = null)
+    public function setArticle(\AppBundle\Entity\Article $article = null)
     {
         $this->article = $article;
 

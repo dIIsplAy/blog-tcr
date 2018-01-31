@@ -1,31 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Article</h1>
+    <h1>User</h1>
 
     <table>
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ article.id }}</td>
+                <td>{{ user.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
-                <td>{{ article.title }}</td>
+                <th>Name</th>
+                <td>{{ user.name }}</td>
             </tr>
             <tr>
-                <th>Description</th>
-                <td>{{ article.description }}</td>
+                <th>Surname</th>
+                <td>{{ user.surname }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ user.age }}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('article_index') }}">Back to the list</a>
+            <a href="{{ path('user_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('article_edit', { 'id': article.id }) }}">Edit</a>
+            <a href="{{ path('user_edit', { 'id': user.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
@@ -33,5 +37,4 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
-    
 {% endblock %}

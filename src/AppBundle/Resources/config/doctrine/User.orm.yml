@@ -1,0 +1,24 @@
+AppBundle\Entity\User:
+    type: entity
+    table: fos_user
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        surname:
+            type: string
+            length: 255
+        age:
+            type: integer
+    lifecycleCallbacks: {  }
+    oneToMany:
+        articles:
+            targetEntity: AppBundle\Entity\Article
+            mappedBy: user
