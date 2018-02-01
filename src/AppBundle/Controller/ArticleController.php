@@ -21,7 +21,6 @@ class ArticleController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $articles = $em->getRepository('AppBundle:Article')->findAll();
-
         return $this->render('article/index.html.twig', array(
             'articles' => $articles,
         ));
@@ -62,6 +61,7 @@ class ArticleController extends Controller
         return $this->render('article/show.html.twig', array(
             'article' => $article,
             'delete_form' => $deleteForm->createView(),
+            'subdelete' => true,
         ));
     }
 

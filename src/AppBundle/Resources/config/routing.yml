@@ -7,3 +7,20 @@ app_comment:
 app_user:
     resource: "@AppBundle/Resources/config/routing/user.yml"
     prefix:   /user
+#  app_front:
+#     resource: "@AppBundle/Resources/config/routing/front.yml"
+#     prefix:   /front
+
+index:
+    path:     /index
+    defaults: { _controller: AppBundle:FrontController:index }
+
+show:
+    path:     /{id}/show
+    defaults: { _controller: AppBundle:FrontController:show }
+    
+
+new:
+    path:     /new
+    defaults: { _controller: AppBundle:FrontController:new }
+

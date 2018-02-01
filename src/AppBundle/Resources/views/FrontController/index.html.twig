@@ -1,0 +1,26 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:FrontController:index{% endblock %}
+
+{% block body %}
+        <tbody>
+        {% for article in articles %}
+            <tr>
+            <ul>
+                <li>
+                <td>{{ article.user }}</td>
+                </li>
+                <li>
+                <td>{{ article.title }}</td>
+                </li>
+                <li>
+                <td>{{ article.description }}</td>
+                </li>
+                <li>
+                   <a href="{{ path('show', { 'id': article.id }) }}">show</a>
+                </li>
+            </ul>
+            </tr>
+        {% endfor %}
+        </tbody>
+{% endblock %}

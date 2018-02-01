@@ -2,6 +2,11 @@
 
 namespace AppBundle\Repository;
 
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\Expr as Expr;
+use AppBundle\Entity\Comment;
+
+
 /**
  * CommentRepository
  *
@@ -10,4 +15,12 @@ namespace AppBundle\Repository;
  */
 class CommentRepository extends \Doctrine\ORM\EntityRepository
 {
+    function findAllByCommentId($id){
+     $this->createQueryBuilder('comment')
+     ->select('comment')
+     ->add('from',new Expr\From(Comment::class,'comment'),false)
+     ->andWhere('comment.article_id = :id')
+     ->setParameter(':id',$id)
+     ->orderBy('comment.id','asc');
+    }
 }
