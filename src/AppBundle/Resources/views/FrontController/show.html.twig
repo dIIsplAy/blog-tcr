@@ -20,10 +20,15 @@
             </tr>
         </tbody>
     </table>
+    <h2>Liste des commentaires</h2>
     {% for comment in comments %}
             <tr>
-                <td><a href="{{ path('comment_show', { 'id': comment.id }) }}">{{ comment.id }}</a></td>
+            <ul>
+            <li>
+                <td><a href="{{ path('comment_show', { 'id' : comment.id }) }}">{{ comment.id }}</a></td>
                 <td>{{ comment.content }}</td>
+                </li>
+            </ul>
             </tr>
         {% endfor %}
     <ul>
