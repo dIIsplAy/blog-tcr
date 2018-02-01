@@ -16,11 +16,14 @@ use AppBundle\Entity\Comment;
 class CommentRepository extends \Doctrine\ORM\EntityRepository
 {
     function findAllByCommentId($id){
-     $this->createQueryBuilder('comment')
-     ->select('comment')
-     ->add('from',new Expr\From(Comment::class,'comment'),false)
-     ->andWhere('comment.article_id = :id')
-     ->setParameter(':id',$id)
-     ->orderBy('comment.id','asc');
+        $qb = $this->createQueryBuilder('comment')
+        ->select('comment')
+        ->add('from',new Expr\From(Comment::class,'comment'),false)
+        ->innerJoin('comment.article','article')
+        ->andWhere('article.id = :id')
+        ->setParameter(':id',$id)
+        ->orderBy('comment.id','asc');
+        return $qb->getQuery()->getResult();
     }
+
 }
