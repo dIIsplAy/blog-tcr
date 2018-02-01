@@ -65,17 +65,17 @@ class User extends BaseUser
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $surname;
+    protected $surname;
 
     /**
      * @var integer
      */
-    private $age;
+    protected $age;
 
 
     /**
