@@ -8,14 +8,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class FrontControllerController extends Controller
 {
+
     public function indexAction()
     {
         
-        $em = $this->getDoctrine()->getManager();
 
-        $articles = $em->getRepository('AppBundle:Article')->findAll();
         return $this->render('AppBundle:FrontController:index.html.twig', array(
-            'articles' => $articles,
+            'articles' => $this->getDoctrine()->getManager()->getRepository('AppBundle:Article')->findAll(),
         ));
     }
 
@@ -34,7 +33,7 @@ class FrontControllerController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $comments = $em->getRepository('AppBundle:Comment')->findAllByCommentId($article->getId());
-        // die (var_dump($article->getId()));
+
         return $this->render('AppBundle:FrontController:show.html.twig', array(
             'article' => $article,
             'subdelete' => true,

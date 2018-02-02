@@ -4,23 +4,48 @@
 
 {% block body %}
         <tbody>
+        <div class="container-fluid">
+ 
+        <div class="container">
+        <div class="text-center">
+         <h1 id="page-title">Welcome To My Blog ...</h1>
+         <h2 id="page-title-2">Here the last articles<h2>
+         </div>
         {% for article in articles %}
+         <div id="block-article">
             <tr>
             <ul>
-                <li>
-                <td>{{ article.user }}</td>
+            <div>
+                <li class="margin-li">
+                <span class="span-article">Autor :</span>
+                <span id="autor">
+                <td id="autor">{{ article.user }}</td>
+                </span>
                 </li>
-                <li>
+            </div>
+            <div>
+                <li class="margin-li">
+            <span class="span-article">Title :</span>
+            <span id="title">
                 <td>{{ article.title }}</td>
+            </span>
                 </li>
-                <li>
+            </div>
+            <div>
+                <li class="margin-li" id="desc">
                 <td>{{ article.description }}</td>
                 </li>
-                <li>
-                   <a href="{{ path('show', { 'id': article.id }) }}">show</a>
+            </div>
+                <li class="margin-li">
+                <p class="lead">
+                   <a id="btn-article" class="btn btn-primary btn-lg" href="{{ path('show', { 'id': article.id }) }}">show</a>
+                </p>
                 </li>
             </ul>
             </tr>
+        <div>
         {% endfor %}
         </tbody>
+        </div>
+    </div>
 {% endblock %}

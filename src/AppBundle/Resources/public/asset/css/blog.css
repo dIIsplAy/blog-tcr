@@ -1,0 +1,61 @@
+@font-face{
+    font-family: 'mono';
+    src: url(../font/mono.ttf);
+}
+@font-face{
+    font-family: 'banger';
+    src: url(../font/banger.ttf);
+}
+@font-face{
+    font-family: 'special';
+    src: url(../font/special.ttf);
+}
+
+
+#page-title{
+    color:#5D89FF;
+    font-size:80px;
+}
+#page-title-2{
+    color:#C0CAE8;
+    font-size:70px;
+}
+.container{
+    width:1100px;
+}
+
+li{
+    list-style: none;
+}
+
+.a-nav{
+    font-size: 25px;
+}
+#brand-nav{
+    font-size:30px;
+}
+.span-article{
+    font-size:18px;
+}
+#desc{
+    font-size:18px;
+}
+#autor{
+    font-size:20px;
+    color:#5D89FF;
+}
+#title{
+    font-size:20px;
+    color:#5D89FF;
+}
+
+#block-article{
+    border-top:2px solid  #C0CAE8;
+    margin-top:100px;
+}
+.margin-li{
+    margin-top:20px;
+}
+#btn-article{
+    width:80px;
+}

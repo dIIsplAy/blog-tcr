@@ -12,7 +12,7 @@ app_user:
 #     prefix:   /front
 
 index:
-    path:     /index
+    path:     /
     defaults: { _controller: AppBundle:FrontController:index }
 
 show:
