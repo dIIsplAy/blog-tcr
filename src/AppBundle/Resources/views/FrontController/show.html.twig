@@ -3,42 +3,71 @@
 {% block title %}AppBundle:FrontController:show{% endblock %}
 
 {% block body %}
- <h1>Article</h1>
-    <table>
         <tbody>
-            <tr>
-                <th>Autor</th>
-                <td>{{ article.user }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
+ <div class="container-fluid">
+ <div class="container">
+ <div class="text-center">
+ <h1 id="style-h1">Article</h1>
+ </div>
+ <tr>
+    <div id="desc-article">
+    <ul>
+        <li class="li-show">
+             <span class="th-resize">Autor :</span>
+             <span class="td-resize">
+             <td>{{ article.user }}</td>
+             </span>
+        </li>
+        <li class="li-show">
+                <span class="th-resize">Title :</span>
+                <span class="td-resize">
                 <td>{{ article.title }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
+                </span>
+        </li>
+        <li class="li-show">
+                <span class="th-resize">Description : </span>
+                <span class="td-resize">
                 <td>{{ article.description }}</td>
-            </tr>
-        </tbody>
-    </table>
-    <h2>Liste des commentaires</h2>
+                </span>
+        </li>
+    </ul>
+    </div>
+</tr>
+<div  id="h2-show" class="text-center">
+    <h2 id="style-h2">Liste des commentaires</h2>
+</div>
     {% for comment in comments %}
             <tr>
             <ul>
-            <li>
-                <td><a href="{{ path('comment_show', { 'id' : comment.id }) }}">{{ comment.id }}</a></td>
+            <li id="comment-style">
                 <td>{{ comment.content }}</td>
                 </li>
             </ul>
             </tr>
         {% endfor %}
-        <h1>Comment creation</h1>
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <div class="text-center">
+        <h3 id="style-h3">Comment creation</h3>
+        </div>
+            {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_label(form.content, 'wright somthink!')}}
+            {{ form_widget(form.content , {'attr':{'class':'form-control'}})}}
+            {{ form_errors(form.content)}}
+
+         </div>
+         <div class="form-group">
+            {{ form_label(form.article , ' Article')}}
+            {{ form_row(form.article, {'attr':{'class':'form-control'}})}}
+         </div>
+         
+        <input type="submit" class="btn btn-outline-success"value="Create" />
     {{ form_end(form) }}
     <ul>
         <li>
-            <a href="{{ path('index') }}">Back to the list</a>
+            <a class="btn btn-outline-primary" href="{{ path('index') }}">Back to the list</a>
         </li>
     </ul>
+</div>
+</div>
+        </tbody>
 {% endblock %}

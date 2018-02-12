@@ -13,7 +13,7 @@
 
 
 #page-title{
-    color:#5D89FF;
+    color:black;
     font-size:80px;
 }
 #page-title-2{
@@ -46,7 +46,7 @@ li{
 }
 #title{
     font-size:20px;
-    color:#5D89FF;
+    color:black;
 }
 
 #block-article{
@@ -57,5 +57,39 @@ li{
     margin-top:20px;
 }
 #btn-article{
-    width:80px;
+    width:90px;
+    font-size:12px;
 }
+#desc-article{
+    margin-top:100px;
+}
+.th-resize{
+    font-size:25px;
+    color:black;
+}
+.td-resize{
+    font-size:20px;
+}
+.li-show{
+    margin-top: 10px;
+}
+#h2-show{
+    margin-top:40px;
+}
+#style-h2{
+    font-size:40px;
+}
+#style-h1{
+    margin-top:40px;
+    font-size:40px;
+}
+#style-h3{
+    margin-top:40px;
+    font-size:40px;
+}
+#comment-style{
+    font-size:20px;
+    text-align: center;
+    margin-top:20px;
+}
+
