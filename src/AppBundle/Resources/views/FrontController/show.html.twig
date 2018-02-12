@@ -36,26 +36,27 @@
 <div  id="h2-show" class="text-center">
     <h2 id="style-h2">Liste des commentaires</h2>
 </div>
+   {% if comments | length < 0 %}
     {% for comment in comments %}
-    {% if comments == false %}
-    aucun commentaires
-    {% else %}
-            <tr>
-            <ul>
-            <li id="comment-style">
-                <td>{{ comment.content }}</td>
-                </li>
-            </ul>
-            </tr>
-        {% endif %}
-        {% endfor %}
+		<tr>
+           <ul>
+           <li id="comment-style">
+               <td>{{ comment.content }}</td>
+               </li>
+           </ul>
+           </tr>
+       
+   {% else %}
+   <p> PAS DE COM OMG</p>
+       {% endfor %}
+       {% endif %}
         <div class="text-center">
         <h3 id="style-h3">Leave a comment</h3>
         </div>
             {{ form_start(form) }}
         <div class="form-group">
             {{ form_label(form.content, 'Write something!')}}
-            {{ form_widget(form.content , {'attr':{'class':'form-control'}})}}
+            {{ form_widget(form.content ,{'value':'','attr':{'class':'form-control'}})}}
             {{ form_errors(form.content)}}
 
          </div>
