@@ -92,4 +92,26 @@ li{
     text-align: center;
     margin-top:20px;
 }
+#back-index{
+    margin-top:40px;
+    display:flex;
+    justify-content: center;
+
+}
+#back-index-style{
+    width: auto;
+    font-size: 15px;
+}
+#creat-com{
+    margin-top:20px;
+
+}
+#creat-style{
+    font-size:15px;
+    width:auto;
+}
+label{
+    font-size:25px;
+    color: black;
+}
 
