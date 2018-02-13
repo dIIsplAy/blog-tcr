@@ -43,9 +43,10 @@ class FrontControllerController extends Controller
     
     }
 
-    public function newAction(Request $request)
-    {
+    public function newAction(Article $article ,Request $request)
+    {   
         $comment = new Comment();
+        $comment->setArticle($article);
         $form = $this->createForm('AppBundle\Form\CommentType', $comment);
         $form->handleRequest($request);
 

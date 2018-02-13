@@ -36,7 +36,7 @@
 <div  id="h2-show" class="text-center">
     <h2 id="style-h2">Liste des commentaires</h2>
 </div>
-   {% if comments | length < 0 %}
+   {% if comments | length > 0 %}
     {% for comment in comments %}
 		<tr>
            <ul>
@@ -45,10 +45,10 @@
                </li>
            </ul>
            </tr>
-       
+       {% endfor %}
    {% else %}
    <p> PAS DE COM OMG</p>
-       {% endfor %}
+       
        {% endif %}
         <div class="text-center">
         <h3 id="style-h3">Leave a comment</h3>
@@ -59,10 +59,6 @@
             {{ form_widget(form.content ,{'value':'','attr':{'class':'form-control'}})}}
             {{ form_errors(form.content)}}
 
-         </div>
-         <div class="form-group">
-            {{ form_label(form.article , ' Article')}}
-            {{ form_widget(form.article, {'attr':{'class':'form-control'}})}}
          </div>
          <div id="creat-com">
         <input id="creat-style"type="submit" class="btn btn-outline-success"value="Send" />

@@ -80,4 +80,9 @@ class Comment
     {
         return $this->article;
     }
+    public function __toString()
+{
+    return (string) $this->comment;
+}
+
 }

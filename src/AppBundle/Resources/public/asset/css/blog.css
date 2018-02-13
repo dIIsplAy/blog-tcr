@@ -13,11 +13,12 @@
 
 
 #page-title{
+    margin-top:60px;
     color:black;
     font-size:80px;
 }
 #page-title-2{
-    color:#C0CAE8;
+    color:black;
     font-size:70px;
 }
 .container{
@@ -117,5 +118,15 @@ label{
 #false{
     font-size: 20px;
     color:black;
+}
+#img-index{
+    height: 400px;
+    background-image: url('../img/snow.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar{
+    margin-bottom: 0;
 }
 
