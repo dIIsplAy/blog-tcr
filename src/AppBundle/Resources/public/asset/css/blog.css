@@ -119,13 +119,13 @@ label{
     font-size: 20px;
     color:black;
 }
-#img-index{
+/* #img-index{
     height: 400px;
     background-image: url('../img/snow.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-size: auto;
+} */
 .navbar{
     margin-bottom: 0;
 }

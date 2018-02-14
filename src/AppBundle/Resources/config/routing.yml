@@ -20,7 +20,7 @@ show:
     defaults: { _controller: AppBundle:FrontController:show }
     
 
-new:
-    path:     /new
+front_new:
+    path:     /{id}/show/new
     defaults: { _controller: AppBundle:FrontController:new }
 

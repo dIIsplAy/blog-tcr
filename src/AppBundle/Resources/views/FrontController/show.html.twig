@@ -53,7 +53,7 @@
         <div class="text-center">
         <h3 id="style-h3">Leave a comment</h3>
         </div>
-            {{ form_start(form) }}
+            {{ form_start(form, {'action': path('front_new', { 'id': article.id }), 'method': 'POST'}) }}
         <div class="form-group">
             {{ form_label(form.content, 'Write something!')}}
             {{ form_widget(form.content ,{'value':'','attr':{'class':'form-control'}})}}
