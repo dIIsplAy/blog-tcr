@@ -25,5 +25,4 @@ class CommentRepository extends \Doctrine\ORM\EntityRepository
         ->orderBy('comment.id','asc');
         return $qb->getQuery()->getResult();
     }
-
 }
