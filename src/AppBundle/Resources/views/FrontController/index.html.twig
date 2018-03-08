@@ -3,7 +3,6 @@
 {% block title %}AppBundle:FrontController:index{% endblock %}
 
 {% block body %}
-        <tbody>
         <div   class="container-fluid">
 <div   id="slider">
   <div class="slides">
@@ -70,41 +69,35 @@
   </div>
 </div>
         <div class="container">
+      <div class="row">
         {% for article in articles %}
-         <div  id="block-article">
-            <tr>
-            <ul>
-            <div>
+         <div class="col-md-4" id="block-article">
+            <ul id="ul-article">
                 <li class="margin-li">
                 <span class="span-article">Autor :</span>
                 <span id="autor">
-                <td id="autor">{{ article.user }}</td>
+                {{ article.user }}
                 </span>
                 </li>
-            </div>
-            <div>
                 <li class="margin-li">
             <span class="span-article">Title :</span>
             <span id="title">
-                <td>{{ article.title }}</td>
+                {{ article.title }}
             </span>
                 </li>
-            </div>
-            <div>
-                <li class="margin-li" id="desc">
-                <td>{{ article.description }}</td>
+                <!-- <li class="margin-li" id="desc">
+                {{ article.description }}
                 </li>
-            </div>
-                <li class="margin-li">
+                <li class="margin-li"> -->
                 <p class="lead">
                    <a id="btn-article" class="btn btn-outline-info text-center" href="{{ path('show', { 'id': article.id }) }}">show</a>
                 </p>
                 </li>
             </ul>
-            </tr>
-        <div>
+          </div>
         {% endfor %}
-        </tbody>
+        
         </div>
+      </div>
     </div>
 {% endblock %}

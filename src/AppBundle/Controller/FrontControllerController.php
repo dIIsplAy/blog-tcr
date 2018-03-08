@@ -32,12 +32,12 @@ class FrontControllerController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $comments = $em->getRepository('AppBundle:Comment')->findAllByCommentId($article->getId());
+        // $comments = $em->getRepository('AppBundle:Comment')->findAllByCommentId($article->getId());
 
         return $this->render('AppBundle:FrontController:show.html.twig', array(
             'article' => $article,
             'subdelete' => true,
-            'comments' =>$comments,
+            // 'comments' =>$comments,
             'form' => $form->createView(),
         ));
     
