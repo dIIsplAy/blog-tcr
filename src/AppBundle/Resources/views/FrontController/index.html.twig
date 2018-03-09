@@ -74,15 +74,15 @@
          <div class="col-md-4" id="block-article">
             <ul id="ul-article">
                 <li class="margin-li">
-                <span class="span-article">Autor :</span>
+                <span class="span-article"></span>
                 <span id="autor">
-                {{ article.user }}
+                {{ article.user|title }}
                 </span>
                 </li>
                 <li class="margin-li">
-            <span class="span-article">Title :</span>
+            <span class="span-article"></span>
             <span id="title">
-                {{ article.title }}
+                {{ article.title|capitalize }}
             </span>
                 </li>
                 <!-- <li class="margin-li" id="desc">
