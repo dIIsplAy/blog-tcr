@@ -6,8 +6,9 @@
         <tbody>
  <div class="container-fluid">
  <div class="container">
+     <div class="regroup-all">
  <div class="text-center">
- <h1 id="style-h1">Article</h1>
+ <h1 id="style-h1">{{ article.title }}</h1>
  </div>
  <tr>
     <div id="desc-article">
@@ -18,12 +19,12 @@
              <td>{{ article.user }}</td>
              </span>
         </li>
-        <li class="li-show">
+        <!-- <li class="li-show">
                 <span class="th-resize">Title :</span>
                 <span class="td-resize">
                 <td>{{ article.title }}</td>
                 </span>
-        </li>
+        </li> -->
         <li class="li-show">
                 <span class="th-resize">Description : </span>
                 <span class="td-resize">
@@ -34,7 +35,7 @@
     </div>
 </tr>
 <div  id="h2-show" class="text-center">
-    <h2 id="style-h2">Liste des commentaires</h2>
+    <h2 id="style-h2">Comment lists</h2>
 </div>
    {% if article.comments | length > 0 %}
     {% for comment in article.comments %}
@@ -47,15 +48,14 @@
            </tr>
        {% endfor %}
    {% else %}
-   <p> PAS DE COM OMG</p>
+   <p class="text-center" id="no-comment">
+        No comments yet</p>
        
        {% endif %}
-        <div class="text-center">
-        <h3 id="style-h3">Leave a comment</h3>
-        </div>
             {{ form_start(form, {'action': path('front_new', { 'id': article.id }), 'method': 'POST'}) }}
-        <div class="form-group">
-            {{ form_label(form.content, 'Write something!')}}
+            <div class="comment-div">
+        <div class="form-group text-center">
+            {{ form_label(form.content, 'Leave a comment')}}
             {{ form_widget(form.content ,{'value':'','attr':{'class':'form-control'}})}}
             {{ form_errors(form.content)}}
 
@@ -63,12 +63,14 @@
          <div id="creat-com">
         <input id="creat-style"type="submit" class="btn btn-outline-success"value="Send" />
         </div>
+    </div>
     {{ form_end(form) }}
     <ul>
         <li id="back-index">
             <a  id="back-index-style"class="btn btn-outline-primary" href="{{ path('index') }}">Back to the list</a>
         </li>
     </ul>
+</div>
 </div>
 </div>
         </tbody>

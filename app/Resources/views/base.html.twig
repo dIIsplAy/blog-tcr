@@ -14,7 +14,7 @@
     <body>
     {% block nav %}
            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a  id="brand-nav" class="navbar-brand" href="#">Road Trips</a>
+  <a  id="brand-nav" class="navbar-brand" href="http://www.blog-tcr.local/app_dev.php/">Road Trips</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -28,12 +28,21 @@
         <a class="nav-link a-nav" href="#">Picturs</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link a-nav" href="#">Connect</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link a-nav" href="#">About Me</a>
       </li>
     </ul>
+    <li class="nav navbar-nav navbar-right">
+      {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+      <a id="user-name">Hi {{ app.user.username }}</a>
+      <li class="nav navbar-nav navbar-right">
+        <a id="btn-logout" href="/app_dev.php/logout">Log out</a>
+      </li>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a id="btn-logout" class="nav-link a-nav text-center" href="http://www.blog-tcr.local/app_dev.php/login">login</a>
+    </li>
+    {% endif %}
   </div>
 </nav>
     {% endblock %}

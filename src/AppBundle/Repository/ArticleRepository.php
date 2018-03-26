@@ -17,10 +17,9 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
     function findAllByArticleId($id){
         $qb = $this->createQuerybuilder('article')
         ->select('article')
-        ->add('from', new Expr\From(Article::article,'article'),false)
-        ->innerJoin('article.comment', 'comment')
-        ->andWhere('comment.id = :id')
-        ->setParameter(':id', $id)
+        ->innerJoin('article.comments', 'comment')
+        ->andWhere('article.id = :id')
+        ->setParameter(':id',$id)
         ->orderBy('article.id','asc');
         return $qb->getQuery()->getresult();
     }

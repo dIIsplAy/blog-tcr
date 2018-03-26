@@ -22,3 +22,4 @@ AppBundle\Entity\User:
         articles:
             targetEntity: AppBundle\Entity\Article
             mappedBy: user
+            orphanRemoval: true

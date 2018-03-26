@@ -31,8 +31,10 @@ class FrontControllerController extends Controller
         }
 
         $em = $this->getDoctrine()->getManager();
+// die('id:'.$request->query->get('id'));
 
-        // $comments = $em->getRepository('AppBundle:Comment')->findAllByCommentId($article->getId());
+        // $article = $em->getRepository('AppBundle:Article')->findAllByArticleId();
+
 
         return $this->render('AppBundle:FrontController:show.html.twig', array(
             'article' => $article,
