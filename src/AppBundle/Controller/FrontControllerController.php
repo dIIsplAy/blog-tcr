@@ -18,7 +18,7 @@ class FrontControllerController extends Controller
         ));
     }
 
-    public function showAction(Article $article, Request $request)
+    public function showAction($id, Request $request)
     {
         $comment = new Comment();
         $form = $this->createForm('AppBundle\Form\CommentType', $comment);
@@ -33,8 +33,9 @@ class FrontControllerController extends Controller
         $em = $this->getDoctrine()->getManager();
 // die('id:'.$request->query->get('id'));
 
-        // $article = $em->getRepository('AppBundle:Article')->findAllByArticleId();
+        $article = $em->getRepository('AppBundle:Article')->findAllByArticleId($id);
 
+        dump($article);
 
         return $this->render('AppBundle:FrontController:show.html.twig', array(
             'article' => $article,

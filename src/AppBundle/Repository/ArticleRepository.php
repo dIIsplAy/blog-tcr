@@ -16,11 +16,12 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
 {
     function findAllByArticleId($id){
         $qb = $this->createQuerybuilder('article')
-        ->select('article')
+        ->select('article', 'comment', 'user')
         ->innerJoin('article.comments', 'comment')
+        ->innerJoin('article.user', 'user')
         ->andWhere('article.id = :id')
         ->setParameter(':id',$id)
         ->orderBy('article.id','asc');
-        return $qb->getQuery()->getresult();
+        return $qb->getQuery()->getSingleResult();
     }
 }

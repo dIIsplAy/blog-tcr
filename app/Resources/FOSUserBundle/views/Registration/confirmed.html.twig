@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+
+
+{% trans_default_domain 'FOSUserBundle' %}
+{% block body %}
+<tbody>
+        <div class="container-fluid">
+        <div class="container">
+        <div class="login_wrapper validate">
+            <div class="animate form login_form">
+                <section class="login_content">
+    {% block fos_user_content %}
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    <div class="valide text-center">
+                    {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+                    <a href="http://www.blog-tcr.local/app_dev.php/">Home</a>
+    </div>
+                {% else %}
+                    <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                {% endif %}
+                <div class="valide text-center">
+        <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+        {% if targetUrl %}
+        <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+        </div>
+        {% endif %}
+    {% endblock fos_user_content %}
+        </section>
+      </div>
+    </div>
+   </div>
+   </div>
+</tbody>
+
+{% endblock %}

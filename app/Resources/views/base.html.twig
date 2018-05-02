@@ -32,6 +32,7 @@
       </li>
     </ul>
     <li class="nav navbar-nav navbar-right">
+      
       {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
       <a id="user-name">Hi {{ app.user.username }}</a>
       <li class="nav navbar-nav navbar-right">
@@ -39,6 +40,9 @@
       </li>
     </li>
     {% else %}
+    <li class="nav-item">
+        <a id="btn-logout" class="nav-link a-nav text-center" href="http://www.blog-tcr.local/app_dev.php/register">Register</a>
+      </li>
     <li class="nav-item">
       <a id="btn-logout" class="nav-link a-nav text-center" href="http://www.blog-tcr.local/app_dev.php/login">login</a>
     </li>
