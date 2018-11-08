@@ -7,6 +7,33 @@ namespace AppBundle\Entity;
  */
 class Article
 {
+
+    /**
+     * @var \DateTime
+     */
+    protected $createdAt;
+    
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+ 
+
+
+
     /**
      * @var int
      */
@@ -21,17 +48,59 @@ class Article
      * @var string
      */
     private $description;
+    
+    /**
+     * @var string
+     */
+    private $image;
+
+    public $file;
+  
+
+
+     /**
+     * Set date
+     *
+     * @param string $createdAt
+     *
+     * @return Article
+     */
 
     /**
      * Get id
      *
      * @return int
      */
-
+    
     public function getId()
     {
         return $this->id;
     }
+    
+     /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Article
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
 
     /**
      * Set title
@@ -164,4 +233,15 @@ class Article
     {
         return $this->user;
     }
+
+   
+
+    /**
+     * Set createdAt
+     *
+     * @param string $createdAt
+     *
+     * @return Article
+     */
+ 
 }

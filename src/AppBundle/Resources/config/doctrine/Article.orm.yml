@@ -14,14 +14,25 @@ AppBundle\Entity\Article:
             length: 255
         description:
             type: text
+        image:
+            type: string
+            length: 255
+        createdAt:
+            type: datetime
+            DateTime: ~
+            nullable: false 
     lifecycleCallbacks: {  }
     oneToMany:
         comments:
             targetEntity: AppBundle\Entity\Comment
             mappedBy: article
+            onDelete: CASCADE
+            onUpdate: CASCADE
+            cascade: [remove]
     manyToOne:
         user:
             targetEntity: AppBundle\Entity\User
             inversedBy: articles
             joinColumn:
                 nullable: true
+

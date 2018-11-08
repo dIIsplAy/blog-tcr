@@ -6,6 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType; 
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+
 
 class ArticleType extends AbstractType
 {
@@ -14,7 +16,10 @@ class ArticleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('title')->add('description')->add('user',EntityType::class,array('class' => 'AppBundle:User', 'choice_label' =>'name',));
+        $builder->add('title')
+        ->add('description')
+        ->add('user',EntityType::class,array('class' => 'AppBundle:User', 'choice_label' =>'name',))
+        ->add('file', FileType::class, array('label' => 'image'));
     }
     /**
      * {@inheritdoc}

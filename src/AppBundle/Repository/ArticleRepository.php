@@ -17,11 +17,23 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
     function findAllByArticleId($id){
         $qb = $this->createQuerybuilder('article')
         ->select('article', 'comment', 'user')
-        ->innerJoin('article.comments', 'comment')
-        ->innerJoin('article.user', 'user')
+        ->leftJoin('article.comments', 'comment')
+        ->leftJoin('article.user', 'user')
         ->andWhere('article.id = :id')
         ->setParameter(':id',$id)
         ->orderBy('article.id','asc');
         return $qb->getQuery()->getSingleResult();
     }
 }
+
+// SELECT a.*, c.* , u.*
+// FROM article a
+// LEFT JOIN comment c ON (a.id = c.article_id)
+// LEFT JOIN fos_user u ON (u.id = a.user_id)
+// WHERE a.id = 2
+
+// SELECT a.*, c.* , u.*
+// FROM article a
+// LEFT JOIN comment c ON (a.id = c.article_id)
+// LEFT JOIN fos_user u ON (u.id = a.user_id)
+// ORDER BY a.id ASC

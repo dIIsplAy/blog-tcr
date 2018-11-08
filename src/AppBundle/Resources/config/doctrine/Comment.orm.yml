@@ -18,3 +18,4 @@ AppBundle\Entity\Comment:
             inversedBy: comments
             joinColumn:
                 nullable: true
+              

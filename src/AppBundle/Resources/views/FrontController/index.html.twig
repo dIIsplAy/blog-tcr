@@ -1,103 +1,135 @@
-{% extends "::base.html.twig" %}
+{% extends "::base.html.twig" %} {% block title %}AppBundle:FrontController:index{% endblock %} {% block body %}
 
-{% block title %}AppBundle:FrontController:index{% endblock %}
-
-{% block body %}
-        <div   class="container-fluid">
-<div   id="slider">
-  <div class="slides">
-    <div class="slider">
-      <div class="legend"></div>
-      <div class="content">
-        <div class="content-txt">
-        <div class="typewriter">
-         <h1  id="page-title">Traveling is the best</h1>
-         <h2  id="page-title-2">way to find yourself<h2>
+<div class="container container-chapo">
+  <h3 class="col-md-12 chapo-home">Un tatouage est la reproduction d'une histoire, d'une blessure, d'un sentiment dont on veut se souvenir éternellement.</h3>
+  <div class="separator-line col-md-2">
+  </div>
 </div>
+
+<span id="scroll-to"></span>
+<div class="mosaique container">
+  <div class="row">
+    <div class="column">
+      <div class="container-img">
+        <div class="hover-img-1">
+          <div class="text-img">Travel</div>
         </div>
+        <img class="image-grille" src="{{ asset('/bundles/app/asset/img/james-douglas-730-unsplash.jpg')}}">
+
       </div>
-      <div class="image">
-        <img src="../bundles/app/asset/img/roadd.jpg">
+      <div class="container-img">
+        <div class="hover-img-2">
+          <div class="text-img">Dream</div>
+        </div>
+        <img class="image-grille" src="{{ asset('/bundles/app/asset/img/peter-sjo-190966-unsplash.jpg')}}">
+      </div>
+      <div class="container-img">
+        <div class="hover-img-3">
+          <div class="text-img">Think</div>
+        </div>
+        <img class="image-grille" src="{{ asset('/bundles/app/asset/img/flavio-gasperini-596276-unsplash.jpg')}}">
       </div>
     </div>
-    <div class="slider">
-      <div class="legend"></div>
-      <div class="content">
-        <div class="content-txt">
-          <h1>Lorem ipsum dolor</h1>
-          <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+    <div class="column-2">
+      <div class="container-img">
+        <div class="hover-img-4">
+          <div class="text-img">Trust</div>
         </div>
+        <img class="image-grille" src="{{ asset('/bundles/app/asset/img/jake-davies-252796-unsplash.jpg')}}">
       </div>
-      <div class="image">
-        <img src="../bundles/app/asset/img/sun.jpg">
+      <div class="container-img">
+        <div class="hover-img-5">
+          <div class="text-img">Hope</div>
+        </div>
+        <img class="image-grille" src="{{ asset('/bundles/app/asset/img/clem-onojeghuo-146651-unsplash.jpg')}}">
+      </div>
+      <div class="container-img">
+        <div class="hover-img-6">
+          <div class="text-img">Adventure</div>
+        </div>
+        <img class="image-grille" src="{{ asset('/bundles/app/asset/img/a-l-l-e-f-v-i-n-i-c-i-u-s-178362-unsplash.jpg')}}">
       </div>
     </div>
-    <div class="slider">
-      <div class="legend"></div>
-      <div class="content">
-        <div class="content-txt">
-          <h1>Lorem ipsum dolor</h1>
-          <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+    <div class="column-3">
+      <div class="text-special-size">
+        <h2 class="text-mosaique">
+          Lorem ipsum dolor
+        </h2>
+      </div>
+      <div class="container-img">
+        <div class="hover-img-7">
+          <div class="text-img">Pepole</div>
         </div>
+        <img class="img-special-size image-grille" src="{{ asset('/bundles/app/asset/img/milkovi-435675-unsplash.jpg')}}">
       </div>
-      <div class="image">
-        <img src="../bundles/app/asset/img/lac.jpg">
-      </div>
-    </div>
-    <div class="slider">
-      <div class="legend"></div>
-      <div class="content">
-        <div class="content-txt">
-          <h1>Lorem ipsum dolor</h1>
-          <h2>Nam ultrices pellentesque facilisis. In semper tellus mollis nisl pulvinar vitae vulputate lorem consequat. Fusce odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</h2>
+      <!-- <img class="img-special-size" src="{{ asset('/bundles/app/asset/img/joshua.jpg')}}"> -->
+      <div class="container-img">
+        <div class="hover-img-8">
+          <div class="text-img">Pepole</div>
         </div>
-      </div>
-      <div class="image">
-        <img src="../bundles/app/asset/img/snow.jpg">
+        <img class="image-grille" src="{{ asset('/bundles/app/asset/img/trevor-cole-1067285-unsplash.jpg')}}">
       </div>
     </div>
   </div>
-  <div class="switch">
-    <ul>
-      <li>
-        <div class="on"></div>
-      </li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
+
 </div>
-        <div class="container">
-      <div class="row">
-        {% for article in articles %}
-         <div class="col-md-4" id="block-article">
-            <ul id="ul-article">
-                <li class="margin-li">
-                <span class="span-article"></span>
-                <span id="autor">
-                {{ article.user|title }}
-                </span>
-                </li>
-                <li class="margin-li">
-            <span class="span-article"></span>
-            <span id="title">
-                {{ article.title|capitalize }}
-            </span>
-                </li>
-                <!-- <li class="margin-li" id="desc">
-                {{ article.description }}
-                </li> -->
-                <li class="margin-li">
-                <p class="lead">
-                   <a id="btn-article" class="btn btn-outline-info text-center" href="{{ path('show', { 'id': article.id }) }}">show</a>
-                </p>
-                </li>
-            </ul>
-          </div>
-        {% endfor %}
-        
-        </div>
+
+
+{% for article in articles %} {% if loop.index is divisible by(2) %}
+<div class="container container-article">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="div-article-titre">
+        <h1 class="h1-article">
+          {{ article.title|capitalize }}
+        </h1>
+      </div>
+      <div class="div-paragraphe-article">
+        <p class="paragraphe-article">
+          {{ article.description[:200] }} ...
+        </p>
+      </div>
+      <div class="d-flex justify-content-start bouton-article">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+          <a href="{{ path('show', { 'id': article.id }) }}">
+            <i class="material-icons">add</i>
+          </a>
+        </button>
       </div>
     </div>
-{% endblock %}
+    <div class="col-md-6">
+      <img class="size-img-article" src="{{ asset('/bundles/app/asset/img_article/' ~ article.image) }}">
+    </div>
+  </div>
+</div>
+
+
+
+{% else %}
+<div class="container container-article">
+  <div class="row">
+    <div class="col-md-6">
+      <img class="size-img-article" src="{{ asset('/bundles/app/asset/img_article/' ~ article.image) }}">
+    </div>
+    <div class="col-md-6">
+      <div class="div-article-titre">
+        <h1 class="h1-article">
+          {{ article.title|capitalize }}
+        </h1>
+      </div>
+      <div class="div-paragraphe-article">
+        <p class="paragraphe-article">
+          {{ article.description[:200] }}
+        </p>
+      </div>
+      <div class="d-flex justify-content-end bouton-article">
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+          <a href="{{ path('show', { 'id': article.id }) }}">
+            <i class="material-icons">add</i>
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %} {% endfor %} {% endblock %}

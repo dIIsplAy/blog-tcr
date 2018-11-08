@@ -37,6 +37,22 @@ class ArticleController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            // Image set up 
+
+            $file = $article->file;
+
+            $fileName =  md5(uniqid()).'.'.$file->guessExtension();
+
+            $file->move(
+                $this->getParameter('image_directory'),
+                $fileName
+            );
+            $article->setImage($fileName);
+            // $createdAt = new \DateTime();
+            $article->setCreatedAt();
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($article);
             $em->flush();
@@ -76,6 +92,26 @@ class ArticleController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
+
+           //dump($article->file);
+          
+            if($article->file){
+
+
+                $file = $article->file;
+
+                 //dump($article->file);
+
+                $fileName =  md5(uniqid()).'.'.$file->guessExtension();
+
+                $file->move(
+                    $this->getParameter('image_directory'),
+                    $fileName
+                );
+                $article->setImage($fileName);    
+            }
+            
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('article_edit', array('id' => $article->getId()));

@@ -1,77 +1,57 @@
-{% extends "::base.html.twig" %}
-
-{% block title %}AppBundle:FrontController:show{% endblock %}
-
-{% block body %}
-        <tbody>
- <div class="container-fluid">
- <div class="container">
-     <div class="regroup-all">
- <div class="text-center">
- <h1 id="style-h1">{{ article.title }}</h1>
- </div>
- <tr>
-    <div id="desc-article">
-    <ul>
-        <li class="li-show">
-             <span class="th-resize">Autor :</span>
-             <span class="td-resize">
-             <td>{{ article.user }}</td>
-             </span>
-        </li>
-        <!-- <li class="li-show">
-                <span class="th-resize">Title :</span>
-                <span class="td-resize">
-                <td>{{ article.title }}</td>
-                </span>
-        </li> -->
-        <li class="li-show">
-                <span class="th-resize">Description : </span>
-                <span class="td-resize">
-                <td>{{ article.description }}</td>
-                </span>
-        </li>
-    </ul>
-    </div>
-</tr>
-<div  id="h2-show" class="text-center">
-    <h2 id="style-h2">Comment lists</h2>
-</div>
-   {% if article.comments | length > 0 %}
-    {% for comment in article.comments %}
-		<tr>
-           <ul>
-           <li id="comment-style">
-               <td>{{ comment.content }}</td>
-               </li>
-           </ul>
-           </tr>
-       {% endfor %}
-   {% else %}
-   <p class="text-center" id="no-comment">
-        No comments yet</p>
-       
-       {% endif %}
-            {{ form_start(form, {'action': path('front_new', { 'id': article.id }), 'method': 'POST'}) }}
-            <div class="comment-div">
-        <div class="form-group text-center">
-            {{ form_label(form.content, 'Leave a comment')}}
-            {{ form_widget(form.content ,{'value':'','attr':{'class':'form-control'}})}}
-            {{ form_errors(form.content)}}
-
-         </div>
-         <div id="creat-com">
-        <input id="creat-style"type="submit" class="btn btn-outline-success"value="Send" />
+{% extends "::base-article.html.twig" %} {% block title %}AppBundle:FrontController:show{% endblock %} {% block body %}
+<tbody>
+    <div class="container-fluid img-container">
+        <div class="size-scroll-container" id="scroll-to-article-title"></div>
+        <div class="container core-article">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="title-article">
+                        <h2>{{ article.createdAt|date("m/d/Y") }}</h2>
+                    </div>
+                    <div class="description-article">
+                        <p>{{ article.description }}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 bloc-image-article">
+                    <img class="img-article" src="{{ asset('/bundles/app/asset/img_article/' ~ article.image) }}">
+                </div>
+            </div>
         </div>
+        <div class="container-fluid container-commentaire-form">
+            <div class="row">
+                <div class="col-md-6 container-commentaire">
+                    <div class="titre-bloc">
+                        <h2>Liste des commentaires</h2>
+                    </div>
+                    <div class="bloc-commentaire">
+                        {% if article.comments | length > 0 %} {% for comment in article.comments  %}
+                        <p>{{ comment.content }}</p>
+                        {% endfor %}
+                        {% else %}
+                        <p id="no-comment">Aucun commentaire pour le moment !</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="col-md-6 container-form">
+                    <div class="titre-form">
+                        <h2>Laisse ton commentaire !</h2>
+                    </div>
+                    {{ form_start(form, {'action': path('front_new', { 'id': article.id }), 'method': 'POST'}) }}
+                    <div class="texte-area-article">
+                         {{ form_widget(form.content ,{'value':'','attr':{'class':'form-control'}})}} {{ form_errors(form.content)}}
+                    </div>
+                    <div class="bloc-input-send">
+                        <button class="input-send btn-2 btn-send-comment" type="submit">Envoyer</button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+        </div>
+        </div>
+
+
+        <a class="btn btn-outline-primary" href="{{ path('index') }}">Back to the list</a>
     </div>
-    {{ form_end(form) }}
-    <ul>
-        <li id="back-index">
-            <a  id="back-index-style"class="btn btn-outline-primary" href="{{ path('index') }}">Back to the list</a>
-        </li>
-    </ul>
-</div>
-</div>
-</div>
-        </tbody>
+
+</tbody>
 {% endblock %}

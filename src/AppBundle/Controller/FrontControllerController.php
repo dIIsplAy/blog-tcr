@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class FrontControllerController extends Controller
 {
 
+
     public function indexAction()
     {
         
@@ -35,7 +36,6 @@ class FrontControllerController extends Controller
 
         $article = $em->getRepository('AppBundle:Article')->findAllByArticleId($id);
 
-        dump($article);
 
         return $this->render('AppBundle:FrontController:show.html.twig', array(
             'article' => $article,

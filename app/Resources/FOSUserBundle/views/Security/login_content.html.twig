@@ -6,7 +6,7 @@
     <div class="container-fluid">
     <div class="container">
     <div class="login_wrapper login">
-        <div class="animate form login_form">
+        <div id="scroll-to"class="animate form login_form">
             <section class="login_content">
                 <form action="{{ path("fos_user_security_check") }}" method="post">
     
@@ -23,7 +23,7 @@
                     </div>
                     <div class="position-exa">
                         <div class="exa">
-                            <button class="btn-exa"type="submit" id="_submit"  name="_submit">{{ 'security.login.submit'|trans }}</button>
+                            <button class="btn-2 btn-log"type="submit" id="_submit"  name="_submit">{{ 'security.login.submit'|trans }}</button>
                         </div>
                     </div>
                     

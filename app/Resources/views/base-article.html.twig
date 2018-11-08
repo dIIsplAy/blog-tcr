@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>My blog</title>
+
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset ('bundles/app/asset/css/blog.css') }}" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{ asset ('bundles/app/asset/js/blog.js') }}" /></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div class="container-fluid container-header-article">
+            <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+                    <header class="mdl-layout__header mdl-layout__header--transparent">
+                      <div class="mdl-layout__header-row">
+                        <!-- Title -->
+                        <span class="mdl-layout-title h1-menu-article">INK-Tattoos</span>
+                        <!-- Add spacer, to align navigation to the right -->
+                        <div class="mdl-layout-spacer"></div>
+                        <!-- Navigation -->
+                        <nav class="mdl-navigation">
+                          <a class="mdl-navigation__link link-social" href=""><i class="fab fa-facebook-f social-icon"></i></a>
+                          <a class="mdl-navigation__link link-social" href=""><i class="fab fa-linkedin-in social-icon"></i></a>
+                          <a class="mdl-navigation__link link-social" href=""><i class="fab fa-github social-icon"></i></a>
+                          <!-- <a class="mdl-navigation__link" href="">Link</a> -->
+                        </nav>
+                      </div>
+                    </header>
+                    <div class="mdl-layout__drawer test">
+                      <span class="mdl-layout-title h1-menu">INK-Tattoos</span>
+                      <nav class="mdl-navigation">    
+                          <btn class="close mdl-navigation__link right-close-menu">X<span class="trait-menu-item"></span></btn>
+                        <a class="mdl-navigation__link link-menu" href="{{ path('index')}}">Acceuil<span class="trait-menu-item"></span></a>
+                        <a class="mdl-navigation__link link-menu" href="{{ path('fos_user_security_login')}}">Connexion<span class="trait-menu-item"></span></a>
+                        <a class="mdl-navigation__link link-menu" href="{{ path('fos_user_registration_register')}}">Inscription<span class="trait-menu-item"></span></a>
+                        <a class="mdl-navigation__link link-menu" href="">À prôpos<span class="trait-menu-item"></span></a>
+                      </nav>
+                    </div>
+                    <main class="mdl-layout__content">
+                            <div class="div-h1-article">
+                                {# <div class="title-effect"></div> #}
+                                    <div>
+                                        <h1 class="h1-big">{{ article.title }}</h1>
+                                    </div>
+                                </div>
+                            <div class="btn-drop-down-article">
+                                    <div class="position-btn-drop-down-article">
+                                        <a class="js-scrollTo" href="#scroll-to-article-title">
+                                            <i class="fas fa-angle-down"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                    </main>
+                  </div>
+
+                </div>
+</body>
+{% block body %} {% endblock %}
+
+</html>
