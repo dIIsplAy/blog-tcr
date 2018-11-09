@@ -1,5 +1,5 @@
-var cacheName = 'ink-tattoos';
-var dataCacheName = 'data-ink-tattoos';
+var cacheName = 'INK';
+var dataCacheName = 'INK';
 var filesToCache = [
     './app.php',
 ];
