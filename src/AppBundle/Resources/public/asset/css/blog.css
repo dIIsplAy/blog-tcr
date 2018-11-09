@@ -407,7 +407,7 @@ margin: 0px !important;
   margin-top:2%;
 }
 .bouton-article{
-  height: auto%;
+  height: auto;
   padding: 16px 0px;
 }
 .button-see-more{
@@ -905,6 +905,9 @@ margin-left:auto;
         }
         .bouton-article-right{
           margin:auto;
+        }
+        .button-see-more{
+          margin-top:4%;
         }
         /* .mdl-layout__drawer.is-visible{
           position: absolute;
