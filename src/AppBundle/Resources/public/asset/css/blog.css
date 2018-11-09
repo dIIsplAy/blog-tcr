@@ -18,6 +18,10 @@ body{
 .container-fluid{
   height: 1000px;
 }
+.footer{
+  height: 20%;
+  width: 100%;
+}
 
 h1{
   font-family:'Anton-regu';
@@ -394,7 +398,7 @@ font-family: 'Rubik-regu';
 margin: 0px !important;
 }
 .div-article-titre{
-  height: 32%;
+  height: auto;
 }
 .div-paragraphe-article{
   height: 40%;
