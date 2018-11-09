@@ -834,8 +834,23 @@ margin-left:auto;
         text-shadow: none;
       }
 
-      @media screen and (max-width: 400){
+      @media screen and (max-width: 400px){
         .mosaique{
           display:none;
+        }
+        .div-h1-site h1{
+          font-size: 80px;
+          text-align: center;
+        }
+        .div-h2-site h2 {
+          font-size:22px;
+          text-align: center;
+        }
+        .chapo-home{
+          font-size:20Px
+        }
+        .h1-article{
+          font-size:25px;
+          text-align: center;
         }
       }
