@@ -408,7 +408,7 @@ margin: 0px !important;
 }
 .button-see-more{
   padding: 2% 4%;
-  background-color:#000000;
+  background-color:#ffee19;
 }
 /* .button-see-more:hover{
   background-color:#ffee19;
@@ -417,7 +417,7 @@ margin: 0px !important;
   font-family: "Anton-regu";
   font-size:18px;
   text-decoration: none !important;
-  color:#ffee19;
+  color:#000000;
   letter-spacing: 0.5vh;
 }
 /* .style-btn-text:hover{
@@ -891,6 +891,12 @@ margin-left:auto;
         .right-close-menu{
           font-size: 34px !important;
           margin-left: 82% !important;
+        }
+        .bouton-article{
+          text-align: center;
+        }
+        .container-article{
+          margin-top:12%;
         }
         /* .mdl-layout__drawer.is-visible{
           position: absolute;
