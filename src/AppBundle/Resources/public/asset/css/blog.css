@@ -403,8 +403,8 @@ margin: 0px !important;
   margin-top:2%;
 }
 .bouton-article{
-  height: 20%;
-  padding: 15px 10px;
+  height: auto%;
+  padding: 16px 0px;
 }
 .button-see-more{
   padding: 2% 4%;
@@ -416,10 +416,11 @@ margin: 0px !important;
 } */
 .style-btn-text{
   font-family: "Anton-regu";
-  font-size:18px;
+  font-size:16px;
   text-decoration: none !important;
   color:#ffffff;
   letter-spacing: 0.5vh;
+  text-transform: capitalize;
 }
 /* .style-btn-text:hover{
   color: #000000 !important;
