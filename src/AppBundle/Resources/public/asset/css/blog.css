@@ -408,7 +408,7 @@ margin: 0px !important;
 }
 .button-see-more{
   padding: 2% 4%;
-  background-color:#ffee19;
+  background-color:#000000;
 }
 /* .button-see-more:hover{
   background-color:#ffee19;
@@ -417,7 +417,7 @@ margin: 0px !important;
   font-family: "Anton-regu";
   font-size:18px;
   text-decoration: none !important;
-  color:#000000;
+  color:#ffffff;
   letter-spacing: 0.5vh;
 }
 /* .style-btn-text:hover{
@@ -473,7 +473,7 @@ margin: 0px !important;
 .separator-line{
   width: 10%;
  height: 5px;
-  background-color: #6ba2f9;
+  background-color: #ffee19;
   /* animation: 2s infinite alternate separator; */
   /* width: 0px; */
   margin: auto;
@@ -896,6 +896,9 @@ margin-left:auto;
         }
         .container-article{
           margin-top:12%;
+        }
+        .bouton-article-right{
+          margin:auto;
         }
         /* .mdl-layout__drawer.is-visible{
           position: absolute;
