@@ -888,7 +888,7 @@ margin-left:auto;
         .h1-article{
           font-size:25px;
           text-align: center;
-          margin-top:1%;
+          margin-top:1% !important;
         }
         .link-menu{
           font-size: 44px !important;
@@ -909,6 +909,9 @@ margin-left:auto;
         }
         .button-see-more{
           margin-top:4%;
+        }
+        .position-btn-drop-down a{
+          color:#ffee19;
         }
         /* .mdl-layout__drawer.is-visible{
           position: absolute;
