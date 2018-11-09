@@ -833,3 +833,9 @@ margin-left:auto;
         color: #000000;
         text-shadow: none;
       }
+
+      @media screen and (max-width: 400){
+        .mosaique{
+          display:none;
+        }
+      }
