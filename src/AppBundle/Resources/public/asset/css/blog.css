@@ -409,6 +409,7 @@ margin: 0px !important;
 .button-see-more{
   padding: 2% 4%;
   background-color:#000000;
+  width: auto;
 }
 /* .button-see-more:hover{
   background-color:#ffee19;
