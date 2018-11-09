@@ -411,20 +411,22 @@ margin: 0px !important;
   padding: 16px 0px;
 }
 .button-see-more{
-  padding: 2% 4%;
-  background-color:#000000;
+  padding: 4% 12%;
+  background-color:transparent;
   width: auto;
+  border: 2px solid black
 }
 /* .button-see-more:hover{
   background-color:#ffee19;
 } */
 .style-btn-text{
   font-family: "Anton-regu";
-  font-size:16px;
+  font-size:20px;
   text-decoration: none !important;
-  color:#ffffff;
+  color:#ffee19;
   letter-spacing: 0.5vh;
   text-transform: capitalize;
+  text-shadow: 2px 2px #000000;
 }
 /* .style-btn-text:hover{
   color: #000000 !important;
