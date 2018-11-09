@@ -876,13 +876,14 @@ margin-left:auto;
           text-align: center;
         }
         .div-h1-article h1{
-          font-size:80px;
+          font-size:60px;
+          margin-top: 10%;
         }
         .btn-drop-down-article{
           margin-top: 80%;
         }
         .title-article h2{
-          font-size: 30px;
+          font-size: 26px;
         }
         .chapo-home{
           font-size:20Px
