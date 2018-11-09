@@ -404,7 +404,25 @@ margin: 0px !important;
 }
 .bouton-article{
   height: 20%;
+  padding: 15px 10px;
 }
+.button-see-more{
+  padding: 2% 4%;
+  background-color:#000000;
+}
+/* .button-see-more:hover{
+  background-color:#ffee19;
+} */
+.style-btn-text{
+  font-family: "Anton-regu";
+  font-size:18px;
+  text-decoration: none !important;
+  color:#ffee19;
+  letter-spacing: 0.5vh;
+}
+/* .style-btn-text:hover{
+  color: #000000 !important;
+} */
 .bouton-article-right{
   height: 20%;
   justify-content: flex-end;
@@ -412,19 +430,16 @@ margin: 0px !important;
 .btn-outline-dark{
   width:24%;
 }
-.material-icons{
-  color:#000000;
-  font-size:40px !important;
-}
+
 .mdl-layout__drawer-button{
   top:2px !important;
 }
-.mdl-button--fab.mdl-button--colored{
+/* .mdl-button--fab.mdl-button--colored{
   background-color:lightgrey !important;
 }
 .mdl-button--fab.mdl-button--colored:hover{
   background-color:lightblue !important;
-}
+} */
 
 .demo-layout-transparent {
   background: url('../assets/demos/transparent.jpg') center / cover;
@@ -838,6 +853,13 @@ margin-left:auto;
         .mosaique{
           display:none;
         }
+        .container-header-home{
+
+          background-image: url('../img/clem-onojeghuo-145805-unsplash.jpg');
+        }
+        .title-effect{
+          display:none;
+        }
         .div-h1-site h1{
           font-size: 80px;
           text-align: center;
@@ -845,6 +867,15 @@ margin-left:auto;
         .div-h2-site h2 {
           font-size:22px;
           text-align: center;
+        }
+        .div-h1-article h1{
+          font-size:80px;
+        }
+        .btn-drop-down-article{
+          margin-top: 80%;
+        }
+        .title-article h2{
+          font-size: 30px;
         }
         .chapo-home{
           font-size:20Px
@@ -861,4 +892,7 @@ margin-left:auto;
           font-size: 34px !important;
           margin-left: 82% !important;
         }
+        /* .mdl-layout__drawer.is-visible{
+          position: absolute;
+        } */
       }
