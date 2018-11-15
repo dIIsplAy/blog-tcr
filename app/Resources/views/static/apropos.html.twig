@@ -1,0 +1,85 @@
+{% extends "::base.html.twig" %} {% block title %}AppBundle:FrontController:index{% endblock %} {% block body %}
+
+
+<div class="container-fluid">
+    <div class="container container-apropos">
+        <div id="scroll-to" class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container-image">
+                        <img class="style-img-apropos" src="{{ asset('/bundles/app/asset/img/thomas_jaune.jpg') }}">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="div-about-title">
+                        <h1 class="about-me-title">About me</h1>
+                    </div>
+                    <div class="div-about-p">
+                        <p class="about-me-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula lorem sed mattis tempus.
+                            Sed id cursus odio. Vestibulum ante tortor, aliquam et odio nec, mollis lacinia arcu. Nam finibus
+                            interdum orci quis accumsan. Phasellus eleifend viverra felis quis sollicitudin. Suspendisse
+                            consectetur velit eget lectus fringilla tempor. Cras feugiat vitae elit ut porttitor. Fusce tincidunt
+                            congue elit vel consectetur. Aliquam posuere ornare iaculis. Suspendisse potenti. Sed hendrerit
+                            nisi quam, a posuere mauris cursus eu. Mauris suscipit condimentum bibendum. Integer faucibus
+                            volutpat lacus at ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                            fames ac turpis egestas. Integer mauris libero, ultricies sit amet sodales sit amet, scelerisque
+                            vel magna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid container-passions">
+        <div class="col-md-12 div-my-passions">
+            <h1 class="my-passions">
+                My passions
+            </h1>
+        </div>
+    </div>
+    <div class="container-fluid container-icone">
+        <div class="row height-row">
+            <div class="col-md-3 bandeau-icone">
+                <img class="bandeau-img-apropos" src="{{ asset('/bundles/app/asset/img/headphones.png') }}">
+                <p class="info-passions">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula lorem sed mattis tempus. Sed id cursus odio. Vestibulum
+                    ante tortor, aliquam et odio nec, mollis lacinia arcu. Nam finibus interdum orci quis accumsan.
+                </p>
+            </div>
+            <div class="col-md-3 bandeau-icone">
+                <img class="bandeau-img-apropos" src="{{ asset('/bundles/app/asset/img/creative.png') }}">
+                <p class="info-passions">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula lorem sed mattis tempus. Sed id cursus odio. Vestibulum
+                    ante tortor, aliquam et odio nec, mollis lacinia arcu. Nam finibus interdum orci quis accumsan.
+                </p>
+            </div>
+            <div class="col-md-3 bandeau-icone">
+                <img class="bandeau-img-apropos" src="{{ asset('/bundles/app/asset/img/barbell.png') }}">
+                <p class="info-passions">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula lorem sed mattis tempus. Sed id cursus odio. Vestibulum
+                    ante tortor, aliquam et odio nec, mollis lacinia arcu. Nam finibus interdum orci quis accumsan.
+                </p>
+            </div>
+            <div class="col-md-3 bandeau-icone">
+                <img class="bandeau-img-apropos" src="{{ asset('/bundles/app/asset/img/website.png') }}">
+                <p class="info-passions">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula lorem sed mattis tempus. Sed id cursus odio. Vestibulum
+                    ante tortor, aliquam et odio nec, mollis lacinia arcu. Nam finibus interdum orci quis accumsan.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

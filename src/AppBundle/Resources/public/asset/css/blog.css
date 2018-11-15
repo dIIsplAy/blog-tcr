@@ -15,9 +15,9 @@
 body{
   background-color: #f2f2f2 !important;
 }
-.container-fluid{
+/* .container-fluid{
   height: 1000px;
-}
+} */
 .footer{
   height: 100px;
   width: 100%;
@@ -919,4 +919,125 @@ margin-left:auto;
         /* .mdl-layout__drawer.is-visible{
           position: absolute;
         } */
+      }
+      @media screen and (max-width: 1000px){
+
+        .title-effect{
+          display:none;
+        }
+        .div-h1-site h1{
+          font-size: 120px;
+          text-align: center;
+        }
+        .div-h2-site h2 {
+          font-size:32px;
+          text-align: center;
+        }
+        .div-h1-article h1{
+          font-size:80px;
+          margin-top: 10%;
+        }
+        .btn-drop-down-article{
+          margin-top: 80%;
+        }
+        .title-article h2{
+          font-size: 36px;
+        }
+        .chapo-home{
+          font-size:30Px
+        }
+        .h1-article{
+          font-size:35px;
+          text-align: center;
+          margin-top:6% !important;
+        }
+        .link-menu{
+          font-size: 54px !important;
+          letter-spacing: 1vh !important;
+        }
+        .right-close-menu{
+          font-size: 44px !important;
+          margin-left: 82% !important;
+        }
+        .bouton-article{
+          text-align: center;
+        }
+        .container-article{
+          margin-top:12%;
+        }
+        .bouton-article-right{
+          margin:auto;
+        }
+        .button-see-more{
+          margin-top:4%;
+        }
+        .position-btn-drop-down a{
+          color:#ffee19;
+        }
+        /* .mdl-layout__drawer.is-visible{
+          position: absolute;
+        } */
+
+        .about-me-p{
+          font-size:12px !important;
+        }
+      }
+
+
+      /* STYLE PAGE A PROPOS
+       */
+
+       .style-img-apropos{
+         width:100%;
+         height: auto;
+       }
+
+       .container-apropos{
+         margin-top:5%;
+       }
+       .about-me-title{
+         font-family: 'Anton-regu';
+         font-size: 60px;
+         letter-spacing: 0.6vh;
+       }
+       .about-me-p{
+         font-family: 'Rubik-regu';
+         font-size:16px;
+         letter-spacing: 0.2vh;
+       }
+/* 
+       .bandeau-img-apropos{
+         height: auto;
+         width: 100%;
+       } */
+
+       .container-icone{
+         margin-top:4%;
+         padding-top:15px;
+         padding-bottom:15px;
+       }
+      .bandeau-icone{
+        text-align: center;
+        padding-top:30px;
+        padding-bottom:10px;
+      }
+      .container-passions{
+        margin-top:8%;
+        margin-bottom:2%;
+      }
+      .div-my-passions{
+        text-align: center;
+      }
+      .my-passions{
+        font-family: 'Anton-regu';
+        font-size:62px;
+        letter-spacing: 0.5vh;
+      }
+      .info-passions{
+        margin-top:6%;
+        font-size:14px;
+        font-family: 'Rubik-regu'
+      }
+      .bandeau-icone:hover{
+        background-color:#fbdc8a;
       }

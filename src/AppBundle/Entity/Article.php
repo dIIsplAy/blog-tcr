@@ -13,27 +13,6 @@ class Article
      */
     protected $createdAt;
     
-    public function setCreatedAt()
-    {
-        $this->createdAt = new \DateTime("now");
-
-        return $this;
-    }
-
-    /**
-     * Get createdAt
-     *
-     * @return string
-     */
-    public function getCreatedAt()
-    {
-        return $this->createdAt;
-    }
-
- 
-
-
-
     /**
      * @var int
      */
@@ -54,12 +33,8 @@ class Article
      */
     private $image;
 
-
-    
     public $file;
   
-
-
      /**
      * Set date
      *
@@ -236,7 +211,22 @@ class Article
         return $this->user;
     }
 
-   
+    public function setCreatedAt()
+    {
+        $this->createdAt = new \DateTime("now");
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return string
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
 
     /**
      * Set createdAt
