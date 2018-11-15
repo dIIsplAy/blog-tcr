@@ -403,6 +403,10 @@ margin: 0px !important;
 .div-paragraphe-article{
   height: 40%;
 }
+.paragraphe-article{
+  font-size:16px;
+  font-family: 'Rubik-regu';
+}
 .div-paragraphe-article >p{
   margin-top:2%;
 }
@@ -1041,3 +1045,5 @@ margin-left:auto;
       .bandeau-icone:hover{
         background-color:#fbdc8a;
       }
+
+    
