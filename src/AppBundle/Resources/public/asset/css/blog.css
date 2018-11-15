@@ -1038,9 +1038,11 @@ margin-left:auto;
         letter-spacing: 0.5vh;
       }
       .info-passions{
-        margin-top:6%;
-        font-size:16px;
-        font-family: 'Rubik-regu'
+        margin-top: 6% !important;
+        font-size: 16px;
+        font-family: 'Rubik-regu';
+        width: 80%;
+        margin: auto;
       }
       .bandeau-icone:hover{
         background-color:#fbdc8a;
