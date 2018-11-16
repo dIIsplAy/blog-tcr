@@ -443,7 +443,7 @@ margin: 0px !important;
 }
 
 .mdl-layout__drawer-button{
-  top:2px !important;
+  margin: 6px 12px !important;
 }
 /* .mdl-button--fab.mdl-button--colored{
   background-color:lightgrey !important;
@@ -991,6 +991,10 @@ margin-left:auto;
       /* STYLE PAGE A PROPOS
        */
 
+      .div-about-p{
+        width:80%;
+      }
+
        .style-img-apropos{
          width:100%;
          height: auto;
@@ -1050,5 +1054,9 @@ margin-left:auto;
       /* .bandeau-icone:hover{
         background-color:#fbdc8a;
       } */
+
+      .container-image{
+        background-color:#fbdc8a;
+      }
 
     
