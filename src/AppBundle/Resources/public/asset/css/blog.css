@@ -1074,12 +1074,14 @@ margin-left:auto;
       height: 5px;
       background-color:  #000000;
       margin:auto;
+      margin-top:2%;
     }
     .title-passions{
       font-size: 14px;
       text-transform: uppercase;
       font-family: 'Rubik-regu';
       letter-spacing: 0.2vh;
+      margin:none;
     }
 
     
