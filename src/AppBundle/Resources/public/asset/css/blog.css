@@ -1080,15 +1080,19 @@ margin-left:auto;
       font-size: 14px;
       text-transform: uppercase;
       font-family: 'Rubik-regu';
-      letter-spacing: 0.2vh;
+      letter-spacing: 0.4vh;
       margin:0px !important;
+      font-weight: 500;
+
     }
     .chapo-mes-passions{
       font-family: 'Rubik-regu';
       font-size:14px;
-      font-weight: 400;
-      letter-spacing: 0.2vh;
-      
+      font-weight: 500;
+      letter-spacing: 0.4vh;
+      text-transform: uppercase;
+      margin:0px !important;
+
     }
 
     
