@@ -1051,12 +1051,9 @@ margin-left:auto;
    .img-laptop{
      width:64px;
    }
-      /* .bandeau-icone:hover{
-        background-color:#fbdc8a;
-      } */
-
-      /* .container-image{
-        background-color:#fbdc8a;
-      } */
+  .container-about-me{
+    margin-left:4%;
+    box-shadow:-8px 0 22px -10px #000000;
+    }
 
     
