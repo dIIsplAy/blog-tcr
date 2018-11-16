@@ -1068,5 +1068,18 @@ margin-left:auto;
     margin-left:4%;
     box-shadow:-8px 0 30px -10px #adadad;
     }
+    .separator-passions{
+      text-align: center;
+      width:16%;
+      height: 5px;
+      background-color:  #000000;
+      margin:auto;
+    }
+    .title-passions{
+      font-size: 14px;
+      text-transform: uppercase;
+      font-family: 'Rubik-regu';
+      letter-spacing: 0.2vh;
+    }
 
     
