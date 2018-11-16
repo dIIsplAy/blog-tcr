@@ -1044,13 +1044,9 @@ margin-left:auto;
         width: 80%;
         margin: auto;
       }
-      .info-passions-laptop{
-        margin-top: 4% !important;
-        font-size: 16px;
-        font-family: 'Rubik-regu';
-        width: 80%;
-        margin: auto;
-      }
+   .img-laptop{
+     width:68px;
+   }
       /* .bandeau-icone:hover{
         background-color:#fbdc8a;
       } */
