@@ -126,11 +126,11 @@
           {{ article.description[:180] }} ...
         </p>
       </div>
-      <a  class="style-btn-text" href="{{ path('show', { 'id': article.id }) }}">
-        see more
-      </a>
-      <!-- <div class="div-btn" > -->
-      <!-- </div> -->
+      <div class="div-btn" >
+        <a  class="style-btn-text" href="{{ path('show', { 'id': article.id }) }}">
+          see more
+        </a>
+      </div>
     </div>
     <div class="col-md-5">
       <img class="size-img-article" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img_article/' ~ article.image) }}">

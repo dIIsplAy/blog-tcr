@@ -432,13 +432,10 @@ letter-spacing: 0.4vh;
 }
 
 
-/* .div-btn{
+.div-btn{
   height: auto;
-  width: 30%;
-  border: 2px solid #000000;
-  text-align: center;
-  padding: 10px 15px;
-} */
+  width: auto;
+}
 .style-btn-text{
   font-family: "Anton-regu";
   font-size:20px;
@@ -451,6 +448,21 @@ letter-spacing: 0.4vh;
   width:60px;
   padding:10px 15px;
   border: 2px solid #000000;
+  transition: .3s ease-out;
+}
+.style-btn-text:hover{
+  background-color: #000000;
+color:#ffee19;
+  
+}
+.style-btn-text::after{
+  content:'';
+  background-image:url('../img/arrow-right.png');
+  margin: auto;
+  width:4%;
+  height: 26px;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .btn-outline-dark{
