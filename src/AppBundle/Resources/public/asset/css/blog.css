@@ -903,8 +903,8 @@ margin-left:auto;
           display:none;
         }
         .div-h1-site h1{
-          font-size: 80px;
-          text-align: center;
+          font-size: 80px !important;
+          text-align: center !important;
         }
         .div-h2-site h2 {
           font-size:22px;
