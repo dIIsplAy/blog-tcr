@@ -391,8 +391,7 @@ display:block;
   height: auto;
 }
 .container-article{
-  margin-top: 4%;
-  margin-top: 4%;
+  margin-top: 6%;
 }
 .h1-article{
 font-size: 40px;
@@ -1119,10 +1118,10 @@ margin-left:auto;
     }
 
     .container-info-article-right{
-      box-shadow:-8px 10px 30px -10px #adadad;
+      box-shadow:8px 10px 30px -10px #adadad;
     }
   
     .container-info-article-left{
-      box-shadow:8px 10px 30px -10px #adadad;
+      box-shadow:-8px 10px 30px -10px #adadad;
     }
  

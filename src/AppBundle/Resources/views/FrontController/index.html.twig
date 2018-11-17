@@ -113,9 +113,9 @@
 
 
 {% for article in articles %} {% if loop.index is divisible by(2) %}
-<div class="container-fluid container-article">
+<div class="container container-article">
   <div class="row">
-    <div class="col-md-6 container-info-article-right">
+    <div class="col-md-5 container-info-article-right">
       <div class="div-article-titre">
         <h1 class="h1-article">
           {{ article.title|capitalize }}
@@ -143,12 +143,12 @@
 
 
 {% else %}
-<div class="container-fluid container-article">
+<div class="container container-article">
   <div class="row">
     <div class="col-md-6" >
       <img class="size-img-article" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img_article/' ~ article.image) }}">
     </div>
-    <div class="col-md-6 container-info-article-left">
+    <div class="col-md-5 container-info-article-left">
       <div class="div-article-titre">
         <h1 class="h1-article">
           {{ article.title|capitalize }}
