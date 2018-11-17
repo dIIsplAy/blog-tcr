@@ -435,6 +435,8 @@ letter-spacing: 0.4vh;
 .div-btn{
   height: auto;
   width: auto;
+  text-align: center;
+  margin-top:4%;
 }
 .style-btn-text{
   font-family: "Anton-regu";
