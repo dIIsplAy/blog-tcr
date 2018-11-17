@@ -413,7 +413,14 @@ letter-spacing: 0.4vh;
   height: auto;
 }
 .div-paragraphe-article{
-  height: 40%;
+  margin-top: 6%;
+    margin-right: 12%;
+    padding: 5px 10px;
+}
+.div-paragraphe-article-left{
+  margin-top: 6%;
+    margin-left: 12%;
+    padding: 5px 10px;
 }
 .paragraphe-article{
   font-family: 'Rubik-regu';
@@ -1118,10 +1125,12 @@ margin-left:auto;
     }
 
     .container-info-article-right{
-      box-shadow:8px 10px 30px -10px #adadad;
+      box-shadow:8px 0 40px -10px #adadad;
+      margin-right:3%;
     }
   
     .container-info-article-left{
-      box-shadow:-8px 10px 30px -10px #adadad;
+      box-shadow:-8px 0 40px -10px #adadad;
+      margin-left:3%
     }
  

@@ -115,7 +115,7 @@
 {% for article in articles %} {% if loop.index is divisible by(2) %}
 <div class="container container-article">
   <div class="row">
-    <div class="col-md-5 container-info-article-right">
+    <div class="col-md-6 container-info-article-right">
       <div class="div-article-titre">
         <h1 class="h1-article">
           {{ article.title|capitalize }}
@@ -134,7 +134,7 @@
         </button>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-5">
       <img class="size-img-article" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img_article/' ~ article.image) }}">
     </div>
   </div>
@@ -145,16 +145,16 @@
 {% else %}
 <div class="container container-article">
   <div class="row">
-    <div class="col-md-6" >
+    <div class="col-md-5" >
       <img class="size-img-article" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img_article/' ~ article.image) }}">
     </div>
-    <div class="col-md-5 container-info-article-left">
+    <div class="col-md-6 container-info-article-left">
       <div class="div-article-titre">
         <h1 class="h1-article">
           {{ article.title|capitalize }}
         </h1>
       </div>
-      <div class="div-paragraphe-article">
+      <div class="div-paragraphe-article-left">
         <p class="paragraphe-article">
           {{ article.description[:200] }}
         </p>
