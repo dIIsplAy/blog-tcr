@@ -126,13 +126,11 @@
           {{ article.description[:180] }} ...
         </p>
       </div>
-      <div class="bouton-article">
-        <button class="button-see-more">
-          <a class="style-btn-text" href="{{ path('show', { 'id': article.id }) }}">
-            Découvrir
-          </a>
-        </button>
-      </div>
+      <a  class="style-btn-text" href="{{ path('show', { 'id': article.id }) }}">
+        see more
+      </a>
+      <!-- <div class="div-btn" > -->
+      <!-- </div> -->
     </div>
     <div class="col-md-5">
       <img class="size-img-article" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img_article/' ~ article.image) }}">
@@ -159,12 +157,10 @@
           {{ article.description[:180] }}...
         </p>
       </div>
-      <div class="bouton-article">
-        <button class="button-see-more bouton-article-right">
+        <div class="">
           <a class="style-btn-text" href="{{ path('show', { 'id': article.id }) }}">
-            Découvrir
+            see more
           </a>
-        </button>
       </div>
     </div>
   </div>
