@@ -1,8 +1,4 @@
-
-
-
-
-{% extends "::base.html.twig" %} {% block title %}AppBundle:FrontController:index{% endblock %} {% block body %}
+ {% extends "::base.html.twig" %} {% block title %}AppBundle:FrontController:index{% endblock %} {% block body %}
 
 <div class="container container-chapo">
   <h3 class="col-md-12 chapo-home">Un tatouage est la reproduction d'une histoire, d'une blessure, d'un sentiment dont on veut se souvenir éternellement.</h3>
@@ -11,7 +7,7 @@
 </div>
 
 <span id="scroll-to"></span>
-<div class="mosaique container">
+<!-- <div class="mosaique container">
   <div class="row">
     <div class="column">
       <div class="container-img">
@@ -66,7 +62,7 @@
         </div>
         <img class="img-special-size image-grille" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img/milkovi-435675-unsplash.jpg')}}">
       </div>
-      <!-- <img class="img-special-size" src="{{ asset('/bundles/app/asset/img/joshua.jpg')}}"> -->
+      <img class="img-special-size" src="{{ asset('/bundles/app/asset/img/joshua.jpg')}}">
       <div class="container-img">
         <div class="hover-img-8">
           <div class="text-img">Pepole</div>
@@ -74,15 +70,52 @@
         <img class="image-grille" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img/trevor-cole-1067285-unsplash.jpg')}}">
       </div>
     </div>
-  </div>
+  </div> -->
 
+</div>
+<div class="container-fluid mosaique">
+  <div class="row">
+    <div class="column col-md-4">
+      <div class="mosaique-over-effect" >
+        <img src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-1.jpg')}}">
+      </div>
+      <div class="mosaique-over-effect">
+        <img src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-4.jpg')}}">
+      </div>
+      <div class="mosaique-over-effect" >
+        <img src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-5.jpg')}}">
+      </div>
+    </div>
+    <div class="column col-md-4">
+      <div class="mosaique-over-effect" >
+        <img src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-6.jpg')}}">
+      </div>
+      <div class="mosaique-over-effect" >
+        <img src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-3.jpg')}}">
+      </div>
+      <div class="mosaique-over-effect" >
+        <img  src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-7.jpg')}}">
+      </div>
+    </div>
+    <div class="column col-md-4">
+      <div class="mosaique-over-effect" >
+        <img  src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-2.jpg')}}">
+      </div>
+      <div class="mosaique-over-effect" >
+        <img  src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-9.jpg')}}">
+      </div>
+      <div class="mosaique-over-effect" >
+        <img  src="{{ asset('/bundles/app/asset/img-mosaique/img-mosa-8.jpg')}}">
+      </div>
+    </div>
+  </div>
 </div>
 
 
 {% for article in articles %} {% if loop.index is divisible by(2) %}
 <div class="container container-article">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 container-info-article-right">
       <div class="div-article-titre">
         <h1 class="h1-article">
           {{ article.title|capitalize }}
@@ -112,10 +145,10 @@
 {% else %}
 <div class="container container-article">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6" >
       <img class="size-img-article" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img_article/' ~ article.image) }}">
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 container-info-article-left">
       <div class="div-article-titre">
         <h1 class="h1-article">
           {{ article.title|capitalize }}
@@ -127,11 +160,11 @@
         </p>
       </div>
       <div class="bouton-article">
-          <button class="button-see-more bouton-article-right">
-              <a class="style-btn-text" href="{{ path('show', { 'id': article.id }) }}">
-                Découvrir
-              </a>
-            </button>
+        <button class="button-see-more bouton-article-right">
+          <a class="style-btn-text" href="{{ path('show', { 'id': article.id }) }}">
+            Découvrir
+          </a>
+        </button>
       </div>
     </div>
   </div>

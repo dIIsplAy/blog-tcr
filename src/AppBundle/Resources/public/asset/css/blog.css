@@ -113,11 +113,11 @@ p{
     display: flex;
     justify-content: center;
     color:#000000;
+    animation: btn-translate 1s;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
 }
 .position-btn-drop-down a:hover{
-  animation: btn-translate 1s;
-  animation-iteration-count: infinite;
-  transition-timing-function: linear;
   color: #ffee19;
   
   
@@ -127,10 +127,12 @@ p{
     transition-timing-function: linear;
      transform: translateY(0px);
   }
+
   50%{
     transition-timing-function: linear;
     transform: translateY(18px);
   }
+ 
   100%{
     transition-timing-function: linear;
     transform: translateY(0px);
@@ -192,11 +194,11 @@ p{
   }
 }
 
- .mosaique{
+ /* .mosaique{
   margin:auto;
   width:80%;
   height:900px;
-}
+} */
 .column {
   flex: 25%;
   width: 25%;
@@ -396,6 +398,17 @@ display:block;
 font-size: 40px;
 font-family: 'Anton-regu';
 margin: 0px !important;
+letter-spacing: 0.4vh;
+}
+.h1-article::before{
+  content:'';
+  background-image:url('../img/tiret-jaune.jpg');
+  margin: auto;
+  width:14%;
+  height: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 4%;
 }
 .div-article-titre{
   height: auto;
@@ -404,8 +417,9 @@ margin: 0px !important;
   height: 40%;
 }
 .paragraphe-article{
-  font-size:16px;
   font-family: 'Rubik-regu';
+  font-size: 16px;
+  letter-spacing: 0.2vh;
 }
 .div-paragraphe-article >p{
   margin-top:2%;
@@ -1094,5 +1108,21 @@ margin-left:auto;
       margin: 0px !important;
 
     }
+    .mosaique-over-effect:hover{
+      opacity: 0.5;
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+      
+    }
+    .mosaique-over-effect{
+      transition: .5s ease-out;
+    }
 
-    
+    .container-info-article-right{
+      box-shadow:-8px 10px 30px -10px #adadad;
+    }
+  
+    .container-info-article-left{
+      box-shadow:8px 10px 30px -10px #adadad;
+    }
+ 
