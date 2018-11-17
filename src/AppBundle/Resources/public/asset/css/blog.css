@@ -395,11 +395,11 @@ display:block;
   margin-top: 6%;
 }
 .h1-article{
-font-size: 35px;
+font-size: 32px;
 font-family: 'Anton-regu';
 margin: 0px !important;
 letter-spacing: 0.4vh;
-columns: #000000;
+color: #000000;
 }
 .h1-article::before{
   content:'';
