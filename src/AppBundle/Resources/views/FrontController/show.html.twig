@@ -34,6 +34,7 @@
                 </div>
 
                 <div class="col-md-6 container-form">
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                     <div class="titre-form">
                         <h2>Laisse ton commentaire !</h2>
                     </div>
@@ -45,6 +46,9 @@
                         <button class="input-send btn-2 btn-send-comment" type="submit">Envoyer</button>
                     </div>
                     {{ form_end(form) }}
+                    {% else %}
+                    <p> You should be logged for send a comment :)</p>
+                    {% endif %}
                 </div>
         </div>
         </div>

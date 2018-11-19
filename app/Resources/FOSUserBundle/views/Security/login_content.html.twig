@@ -13,7 +13,7 @@
                     {% if csrf_token %}
                         <input class="input-form" type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
                     {% endif %}
-                    <div class="title-form-connect">
+                    <div class="form-connect">
                         <h2 class="conect">Sign in</h2>
                         <img class="icon-connect" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img/profil-connect.png') }}">
                         <div class="separator"></div>
@@ -24,13 +24,13 @@
                     <div>
                         <input  class="input-form" type="password" id="password" name="_password" required="required" class="form-control conect-input" placeholder="Password" />
                     </div>
-                    <div class="position-exa">
-                        <div class="exa">
+                    <div>
+                        <div>
                             <button  class="btn-2 btn-log" type="submit" id="_submit"  name="_submit">{{ 'security.login.submit'|trans }}</button>
                         </div>
                     </div>
                     
-                        <a class="reset-pass pass-reset" href="{{ path('fos_user_resetting_request') }}">Mot de passe perdu ?</a>
+                        <a class="reset-pass pass-reset" href="{{ path('fos_user_resetting_request') }}">Password lost ?</a>
                 
     
                     {% if error %}

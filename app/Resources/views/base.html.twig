@@ -91,6 +91,12 @@
                     <div class="mdl-layout__drawer">
                       <span class="mdl-layout-title h1-menu">INK-Tattoos</span>
                       <nav class="mdl-navigation">    
+                          {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                          <p class="left-log-menu">{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} </p>
+                          <a class="left-log-menu log-out" href="{{ path('fos_user_security_logout') }}">
+                              {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                          </a>
+                          {% endif %}           
                           <btn class="close mdl-navigation__link right-close-menu">X<span class="trait-menu-item"></span></btn>
                         <a class="mdl-navigation__link link-menu" href="{{ path('index')}}">HOME<span class="trait-menu-item"></span></a>
                         <a class="mdl-navigation__link link-menu" href="{{ path('fos_user_security_login')}}">SIGN IN<span class="trait-menu-item"></span></a>
@@ -123,7 +129,6 @@
                 </div>
 
 {% block body %} {% endblock %}
-
 <div class="footer">
 
 </div>

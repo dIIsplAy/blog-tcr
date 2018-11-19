@@ -3,36 +3,41 @@
 <tbody>
         <div class="container-fluid">
         <div class="container">
-        <div class="login_wrapper register">
+        <div class="login_wrapper register col-md-6 offset-md-3 container-form-register">
             <div id="scroll-to"class="animate form login_form">
                 <section class="login_content">
-                    <h1 class="conect text-center">Register</h1>
+                    <div class="form-register">
+                        <h2>Register</h2>
+                        <img class="icon-register" src="{{ asset('/bundles/app/asset/img/sign-up.png') }}">
+                        <div class="separator"></div>
+                    </div>
               {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
               <div>
-                     {{ form_widget(form.name, {'attr': {'class': 'conect-input form-control', 'placeholder': 'Name' }}) }}
+                     {{ form_widget(form.name, {'attr': {'class': 'input-form form-control', 'placeholder': 'Name' }}) }}
               </div>
               <div>
-                    {{ form_widget(form.surname, {'attr': {'class': 'conect-input form-control', 'placeholder': 'Surname'}}) }}
+                    {{ form_widget(form.surname, {'attr': {'class': 'input-form form-control', 'placeholder': 'Surname'}}) }}
                 </div>
                 <div>
-                        {{ form_widget(form.username, {'attr': {'class': 'conect-input form-control', 'placeholder': 'Username'}}) }}
+                        {{ form_widget(form.username, {'attr': {'class': 'input-form form-control', 'placeholder': 'Username'}}) }}
                 </div>
                         <div>
-                            {{ form_widget(form.age, {'attr': {'class': 'conect-input form-control', 'placeholder': 'Age'}}) }}
+                            {{ form_widget(form.age, {'attr': {'class': 'input-form form-control', 'placeholder': 'Age'}}) }}
                         </div>
                         <div>
-                                {{ form_widget(form.email, {'attr': {'class': 'conect-input form-control', 'placeholder': 'Email'}}) }}
+                                {{ form_widget(form.email, {'attr': {'class': 'input-form form-control', 'placeholder': 'Email'}}) }}
                             </div>
                             <div>
-                                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'conect-input form-control', 'placeholder': 'Password'}}) }}
+                                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'input-form form-control', 'placeholder': 'Password'}}) }}
                                 </div>
                                 <div>
-                                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'conect-input form-control', 'placeholder': 'Confirm password'}}) }}
+                                        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'input-form form-control', 'placeholder': 'Confirm password'}}) }}
                                     </div>
               {{ form_widget(form) }}
-    <div class="position-exa">
-         <div class="exa">
-            <input class="btn-exa" type="submit" value="{{ 'registration.submit'|trans }}" />
+    <div class="">
+         <div class="">
+
+            <button class="btn-2 btn-log" type="submit" value="Sign up">{{ 'registration.submit'|trans }}</button>
         </div>
     </div>
     {{ form_end(form) }}

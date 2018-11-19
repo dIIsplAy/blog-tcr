@@ -447,8 +447,7 @@ color: #000000;
   font-size:20px;
   text-decoration: none !important;
   color:#ffee19;
-  letter-spacing: 0.5vh;
-  text-transform: capitalize;
+  letter-spacing: 0.1vh;
   text-shadow: 2px 2px #000000;
   height: 30px;
   width:60px;
@@ -561,7 +560,18 @@ color:#ffee19;
   width: 8% !important;
     margin-left: 90% !important;
 }
-
+.left-log-menu{
+  text-decoration: none !important;
+  font-family: 'Anton-regu';
+  font-size:18px !important;
+  color:#ffffff !important;
+  letter-spacing: 0.5vh !important;
+  width: 20% !important;
+  margin-left:1%;
+}
+.log-out:hover{
+  color:#ffee19;
+}
 .trait-menu-item{
   position: relative ;
   width: 100%;
@@ -821,7 +831,6 @@ margin-left:auto;
          cursor: pointer;
          /* columns: #000000; */
          letter-spacing: 0.2vh !important;
-         text-transform: uppercase;
          font-weight: bold;
          color:#ffee19;
          border:2px solid #000000;
@@ -874,7 +883,6 @@ margin-left:auto;
         cursor: pointer;
         /* columns: #000000; */
         letter-spacing: 0.2vh !important;
-        text-transform: uppercase;
         font-weight: bold;
         color:#ffee19;
         border:2px solid #000000;
@@ -1150,11 +1158,11 @@ margin-left:auto;
  
 
     /* STYLE FORM  */
-    .title-form-connect{
+    .form-connect{
       text-align: center;
       
     }
-    .title-form-connect > h2 {
+    .form-connect > h2 {
       font-family: 'Anton-regu';
       font-size: 50px;
       letter-spacing: 2vh;
@@ -1175,14 +1183,16 @@ margin-left:auto;
       text-align: center;
     }
     .input-form{
-      width:80%;
+      width:80% !important;
       margin-top:4% !important;
-      border-radius: 3px;
+      border-radius: 0px !important;
       height: 35px;
-      border:2px solid #000000;
-      font-family: 'Rubik-regu'
+      border:1px solid #000000 !important;
+      font-family: 'Rubik-regu';
+      padding-left:2% !important;
+      margin: auto;
     }
-
+    
     ::-webkit-input-placeholder{
       font-family: 'Rubik-regu';
       font-size:14px;
@@ -1191,5 +1201,29 @@ margin-left:auto;
     .pass-reset{
       color:#000000;
       font-family: 'Rubik-regu';
-      font-size:14px;
+      font-size:16px;
+      text-decoration: none !important;
+    }
+    .pass-reset:hover{
+      color: #000000;
+    }
+
+    .form-register{
+      text-align: center;
+    }
+    .form-register > h2{
+      font-family: 'Anton-regu';
+      font-size: 50px;
+      letter-spacing: 2vh;
+      text-transform: uppercase;
+      color:#000000;
+    }
+    .icon-register{
+      margin-bottom:2%;
+    }
+    .container-form-register{
+      margin-top:6%;
+      box-shadow:-8px 0 40px 0px #adadad;
+      padding:30px 30px;
+      text-align: center;
     }
