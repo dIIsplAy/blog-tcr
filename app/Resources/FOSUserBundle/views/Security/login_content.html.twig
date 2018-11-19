@@ -5,29 +5,32 @@
 <tbody>
     <div class="container-fluid">
     <div class="container">
-    <div class="login_wrapper login">
+    <div class="login_wrapper login col-md-6 offset-md-3">
         <div id="scroll-to"class="animate form login_form">
             <section class="login_content">
-                <form action="{{ path("fos_user_security_check") }}" method="post">
+                <form class="container-form-connect" action="{{ path("fos_user_security_check") }}" method="post">
     
                     {% if csrf_token %}
-                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                        <input class="input-form" type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
                     {% endif %}
-    
-                    <h1 class="conect">Connexion</h1>
-                    <div>
-                        <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" class="form-control conect-input" placeholder="Username" />
+                    <div class="title-form-connect">
+                        <h2 class="conect">Sign in</h2>
+                        <img class="icon-connect" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img/profil-connect.png') }}">
+                        <div class="separator"></div>
                     </div>
                     <div>
-                        <input type="password" id="password" name="_password" required="required" class="form-control conect-input" placeholder="Password" />
+                        <input class="input-form" type="text" id="username" name="_username" value="{{ last_username }}" required="required" class="form-control conect-input" placeholder="Username" />
+                    </div>
+                    <div>
+                        <input  class="input-form" type="password" id="password" name="_password" required="required" class="form-control conect-input" placeholder="Password" />
                     </div>
                     <div class="position-exa">
                         <div class="exa">
-                            <button class="btn-2 btn-log"type="submit" id="_submit"  name="_submit">{{ 'security.login.submit'|trans }}</button>
+                            <button  class="btn-2 btn-log" type="submit" id="_submit"  name="_submit">{{ 'security.login.submit'|trans }}</button>
                         </div>
                     </div>
                     
-                        <a class="reset-pass" href="{{ path('fos_user_resetting_request') }}">Mot de passe perdu ?</a>
+                        <a class="reset-pass pass-reset" href="{{ path('fos_user_resetting_request') }}">Mot de passe perdu ?</a>
                 
     
                     {% if error %}
