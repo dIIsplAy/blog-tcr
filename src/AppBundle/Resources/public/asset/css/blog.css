@@ -1260,13 +1260,13 @@ margin-left:auto;
     }
     .footer{
       text-align: center;
-      padding: 18px 10px;
     }
     .footer >p{
       font-family: 'Rubik-regu';
       color: #ffee19;
       letter-spacing: 1vh;
       font-size:14px;
+      padding: 15px 15px;
     }
 
   
