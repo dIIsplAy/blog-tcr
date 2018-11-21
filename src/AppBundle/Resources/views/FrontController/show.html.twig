@@ -2,9 +2,9 @@
 <tbody>
     <div class="container-fluid img-container">
         <div class="size-scroll-container" id="scroll-to-article-title"></div>
-        <div class="container core-article">
+        <div class="container-fluid core-article">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-5 container-article-show">
                     <div class="title-article">
                         <h2>{{ article.createdAt|date("m/d/Y") }}</h2>
                     </div>
@@ -19,44 +19,43 @@
         </div>
         <div class="container-fluid container-commentaire-form">
             <div class="row">
+                    <div class="col-md-6 container-form">
+                            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <div class="titre-form">
+                            <h2>Be the first to leave a comment</h2>
+                        </div>
+                        {{ form_start(form, {'action': path('front_new', { 'id': article.id }), 'method': 'POST'}) }}
+                        <div class="texte-area-article">
+                             {{ form_widget(form.content ,{'value':'','attr':{'class':'form-control'}})}} {{ form_errors(form.content)}}
+                        </div>
+                        <div class="bloc-input-send">
+                            <button class="input-send btn-2 btn-send-comment" type="submit">Envoyer</button>
+                        </div>
+                        {{ form_end(form) }}
+                        {% else %}
+                        <div class="titre-form">
+                            <h2>you must be connected to leave a comment</h2>
+                        </div>
+                        {% endif %}
+                    </div>
                 <div class="col-md-6 container-commentaire">
                     <div class="titre-bloc">
-                        <h2>Liste des commentaires</h2>
+                        <h2>Last comments</h2>
                     </div>
                     <div class="bloc-commentaire">
                         {% if article.comments | length > 0 %} {% for comment in article.comments  %}
                         <p>{{ comment.content }}</p>
                         {% endfor %}
                         {% else %}
-                        <p id="no-comment">Aucun commentaire pour le moment !</p>
+                        <p id="no-comment">No comments for the moment</p>
                         {% endif %}
                     </div>
                 </div>
-
-                <div class="col-md-6 container-form">
-                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <div class="titre-form">
-                        <h2>Laisse ton commentaire !</h2>
-                    </div>
-                    {{ form_start(form, {'action': path('front_new', { 'id': article.id }), 'method': 'POST'}) }}
-                    <div class="texte-area-article">
-                         {{ form_widget(form.content ,{'value':'','attr':{'class':'form-control'}})}} {{ form_errors(form.content)}}
-                    </div>
-                    <div class="bloc-input-send">
-                        <button class="input-send btn-2 btn-send-comment" type="submit">Envoyer</button>
-                    </div>
-                    {{ form_end(form) }}
-                    {% else %}
-                    <div class="titre-form">
-                        <h2> You should be logged for send a comment :)</h2>
-                    </div>
-                    {% endif %}
-                </div>
         </div>
-        </div>
-
-
         <a class="btn btn-outline-primary" href="{{ path('index') }}">Back to the list</a>
+        </div>
+
+
     </div>
 
 </tbody>

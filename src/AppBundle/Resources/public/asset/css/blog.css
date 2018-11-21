@@ -698,7 +698,9 @@ margin-left:auto;
     .size-scroll-container{
       height: 20px;
     }
-
+    .description-article{
+      margin-top:10%;
+    }
     .description-article > p{
       font-family: 'Rubik-regu';
       font-size:16px;
@@ -738,12 +740,18 @@ margin-left:auto;
     }
 
     .container-commentaire-form{
-      margin-top:10%;
+      margin-top:5%;
       height: auto !important; 
+      padding: 20px 20px;
     }
     .container-commentaire{
       margin-left:auto;
       margin-right:auto;
+      border-left: 2px solid #ffee19;
+    }
+    .container-article-show{
+      box-shadow:8px 0 30px -10px #adadad;
+      padding:20px 20px;
     }
     .titre-bloc > h2 {
       font-family: 'Anton-regu';
@@ -754,12 +762,14 @@ margin-left:auto;
       text-align: center;
     }
     .bloc-commentaire{
-      /* margin:auto; */
+      width:80%;
+      margin:auto;
 
     }
     .bloc-commentaire > p{
       font-family: 'Rubik-regu';
       font-size: 18px;
+      
     }
     .bloc-commentaire > #no-comment{
       font-family: 'Rubik-regu';
