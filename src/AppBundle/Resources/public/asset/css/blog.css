@@ -1199,7 +1199,7 @@ margin-left:auto;
 
     }
     .mosaique-over-effect:hover{
-      opacity: none;
+      opacity: 1;
       filter: blur(0px);
       -webkit-filter: blur(0px);
       
