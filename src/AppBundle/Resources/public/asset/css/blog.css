@@ -18,10 +18,7 @@ body{
 /* .container-fluid{
   height: 1000px;
 } */
-.footer{
-  height: 100px;
-  width: 100%;
-}
+
 
 h1{
   font-family:'Anton-regu';
@@ -1254,3 +1251,22 @@ margin-left:auto;
       padding:30px 30px;
       text-align: center;
     }
+
+    /* STYLE FOOTER */
+
+    .container-footer{
+      margin-top:5%;
+      background-color: #000000;
+    }
+    .footer{
+      text-align: center;
+      padding: 18px 10px;
+    }
+    .footer >p{
+      font-family: 'Rubik-regu';
+      color: #ffee19;
+      letter-spacing: 1vh;
+      font-size:14px;
+    }
+
+  
