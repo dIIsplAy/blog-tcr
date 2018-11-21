@@ -411,6 +411,16 @@ color: #000000;
   display: inline-block;
   margin-right: 4%;
 }
+.title-article > h2::before{
+  content:'';
+  background-image:url('../img/tiret-jaune.jpg');
+  margin: auto;
+  width:14%;
+  height: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 4%;
+}
 .div-article-titre{
   height: auto;
   margin-top:4%;
@@ -699,12 +709,14 @@ margin-left:auto;
       height: 20px;
     }
     .description-article{
-      margin-top:10%;
+      margin: 5% 5%;
     }
     .description-article > p{
       font-family: 'Rubik-regu';
       font-size:16px;
       letter-spacing: 0.1vh !important;
+      width: 70%;
+      margin: auto;
     }
     .mdl-navigation__link > .social-icon {
       color: #ffee19 !important;
@@ -769,7 +781,9 @@ margin-left:auto;
     .bloc-commentaire > p{
       font-family: 'Rubik-regu';
       font-size: 18px;
-      
+      background-color: #e5e5e5;
+      border-radius: 3px;
+      padding: 5px 20px;
     }
     .bloc-commentaire > #no-comment{
       font-family: 'Rubik-regu';
@@ -787,8 +801,7 @@ margin-left:auto;
     .container-form{
       margin-left: auto;
       margin-right: auto;
-      /* background-color:#ffee19;
-      height: 50%; */
+      border-right: 2px solid #ffee19;
     }
     .texte-area-article{
       height: auto;
