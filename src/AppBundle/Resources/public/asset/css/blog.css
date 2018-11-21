@@ -1206,8 +1206,8 @@ margin-left:auto;
     }
     .mosaique-over-effect{
       opacity: 0.5;
-      filter: blur(0.7px);
-      -webkit-filter: blur(0.7px);
+      filter: blur(1px);
+      -webkit-filter: blur(1px);
       
     }
     .mosaique-over-effect{
