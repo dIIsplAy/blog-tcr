@@ -22,6 +22,7 @@
                     <div class="col-md-6 container-form">
                             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         <div class="titre-form">
+                            <img class="style-icon-show"src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img/icon-write.png') }}">
                             <h2>Be the first to leave a comment</h2>
                         </div>
                         {{ form_start(form, {'action': path('front_new', { 'id': article.id }), 'method': 'POST'}) }}
@@ -40,6 +41,7 @@
                     </div>
                 <div class="col-md-6 container-commentaire">
                     <div class="titre-bloc">
+                        <img class="style-icon-show" src="{{ asset('/promo3/tcristophol/blog-tcr/bundles/app/asset/img/icon-comment.png') }}">
                         <h2>Last comments</h2>
                     </div>
                     <div class="bloc-commentaire">

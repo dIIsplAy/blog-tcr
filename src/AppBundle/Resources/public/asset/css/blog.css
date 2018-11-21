@@ -770,17 +770,10 @@ margin-left:auto;
       font-size:32px;
       letter-spacing: 0.3vh !important;
     }
-    .titre-bloc > h2::after{
-      content: '';
-    background-image: url('../img/icon-comment.png');
-    width: 10%;
-    height: 60px;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 4%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    }
+   .style-icon-show{
+     height: auto;
+     width: 10%
+   }
     .titre-bloc{
       text-align: center;
     }
@@ -809,17 +802,7 @@ margin-left:auto;
       font-size: 32px;
       letter-spacing: 0.3vh !important;
     }
-    .titre-form >h2::after{
-      content: '';
-      background-image: url('../img/icon-write.png');
-      width: 10%;
-      height: 60px;
-      vertical-align: middle;
-      display: inline-block;
-      margin-left: 4%;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+ */
     .container-form{
       margin-left: auto;
       margin-right: auto;
