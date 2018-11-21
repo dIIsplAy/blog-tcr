@@ -1200,8 +1200,8 @@ margin-left:auto;
     }
     .mosaique-over-effect:hover{
       opacity: none;
-      filter: none;
-      -webkit-filter: none;
+      filter: blur(0px);
+      -webkit-filter: blur(0px);
       
     }
     .mosaique-over-effect{
