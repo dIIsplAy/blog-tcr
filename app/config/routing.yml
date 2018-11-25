@@ -32,6 +32,13 @@ apropos:
         template:     'static/apropos.html.twig'
         maxAge:       86400
         sharedAge:    86400
-        
+
+admin-ink:
+    path: /admin-ink
+    defaults:
+        _controller:  FrameworkBundle:Template:template
+        template:     'static/admin.html.twig'
+        maxAge:       86400
+        sharedAge:    86400       
 
   
